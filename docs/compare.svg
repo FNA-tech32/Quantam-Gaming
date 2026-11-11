@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="-apple-system,Segoe UI,Inter,sans-serif" role="img" aria-label="Vanilla Claude Code vs. SHINE comparison">
+  <title>Vanilla Claude Code vs. SHINE — side-by-side</title>
+  <desc>What happens to the same prompt under a vanilla Claude Code install vs. a SHINE-enabled install, for four representative agency prompts.</desc>
+
+  <defs>
+    <linearGradient id="bare" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fafafa"/><stop offset="1" stop-color="#e5e7eb"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdf2f8"/><stop offset="1" stop-color="#fbcfe8"/></linearGradient>
+    <linearGradient id="prompt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffbeb"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+    <style>
+      .title { font-size:22px; font-weight:700; fill:#0f172a; }
+      .sub { font-size:12px; fill:#64748b; }
+      .band { font-size:14px; font-weight:700; letter-spacing:1px; }
+      .bandL { fill:#475569; }
+      .bandR { fill:#be185d; }
+      .row { font-size:13px; fill:#0f172a; }
+      .pill { font-size:11px; font-weight:700; fill:#fff; }
+      .node { rx:10; ry:10; stroke:#94a3b8; stroke-width:1; }
+      .prompt { font-size:13px; font-weight:600; fill:#713f12; }
+      .tag { font-size:10px; font-weight:700; }
+    </style>
+  </defs>
+
+  <text x="600" y="36" text-anchor="middle" class="title">Vanilla Claude Code vs. SHINE — what changes, prompt by prompt</text>
+  <text x="600" y="56" text-anchor="middle" class="sub">Same model. Same terminal. Different orchestration layer. Four representative prompts an agency actually types.</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="80" width="560" height="48" rx="10" fill="url(#bare)"/>
+  <text x="310" y="110" text-anchor="middle" class="band bandL">VANILLA CLAUDE CODE</text>
+  <rect x="610" y="80" width="560" height="48" rx="10" fill="url(#shine)"/>
+  <text x="890" y="110" text-anchor="middle" class="band bandR">WITH SHINE</text>
+
+  <!-- Row 1: proposal -->
+  <rect x="30" y="150" width="1140" height="38" rx="10" fill="url(#prompt)"/>
+  <text x="50" y="173" class="prompt">PROMPT 1 · "Write a proposal for ACME's tech SEO project, MoSCoW, 40 MDs, 15% discount."</text>
+
+  <rect class="node" x="30" y="196" width="560" height="110" fill="#fff"/>
+  <text x="50" y="218" class="row">• Asks what "MoSCoW" and "MD" mean</text>
+  <text x="50" y="238" class="row">• No memory of ACME — asks for the brief again</text>
+  <text x="50" y="258" class="row">• Generic proposal template (English, no client tone)</text>
+  <text x="50" y="278" class="row">• No Sources footer; invented KPIs possible</text>
+  <text x="50" y="298" class="row">• Time-to-first-draft: ~10 minutes of back-and-forth</text>
+
+  <rect class="node" x="610" y="196" width="560" height="110" fill="#fff"/>
+  <text x="630" y="218" class="row">✓ Rule #19 fires — loads client-acme.md + style-proposal.md</text>
+  <text x="630" y="238" class="row">✓ MoSCoW + MD + 15% baked in; Italian tone auto-applied</text>
+  <text x="630" y="258" class="row">✓ 40 MDs × 8h mapped to phase plan automatically</text>
+  <text x="630" y="278" class="row">✓ Verified-source watermark on any numbers</text>
+  <text x="630" y="298" class="row">✓ First draft in &lt; 60s — ready to review, not explain</text>
+
+  <!-- Row 2: email -->
+  <rect x="30" y="316" width="1140" height="38" rx="10" fill="url(#prompt)"/>
+  <text x="50" y="339" class="prompt">PROMPT 2 · "Draft a follow-up to Jamie at CONTOSO about the workshop slot."</text>
+
+  <rect class="node" x="30" y="362" width="560" height="110" fill="#fff"/>
+  <text x="50" y="384" class="row">• Who's Jamie? What workshop? Which thread?</text>
+  <text x="50" y="404" class="row">• Generic English, no CC, no subject convention</text>
+  <text x="50" y="424" class="row">• No knowledge of tone history for CONTOSO</text>
+  <text x="50" y="444" class="row">• Requires manually pasting past thread</text>
+  <text x="50" y="464" class="row">• 6–8 revisions to match Kevin's voice</text>
+
+  <rect class="node" x="610" y="362" width="560" height="110" fill="#fff"/>
+  <text x="630" y="384" class="row">✓ shine-client-detect pre-loads client-contoso.md</text>
+  <text x="630" y="404" class="row">✓ Gmail MCP pulls the last 3 thread messages automatically</text>
+  <text x="630" y="424" class="row">✓ Rule #17: "CONTOSO | Workshop slot" subject, IT tone, CC rules</text>
+  <text x="630" y="444" class="row">✓ style-contoso.md applied (past corrections baked in)</text>
+  <text x="630" y="464" class="row">✓ 1–2 revisions max; often ready as-is</text>
+
+  <!-- Row 3: bug -->
+  <rect x="30" y="482" width="1140" height="38" rx="10" fill="url(#prompt)"/>
+  <text x="50" y="505" class="prompt">PROMPT 3 · "This cron job silently fails on Mondays. Why?"</text>
+
+  <rect class="node" x="30" y="528" width="560" height="110" fill="#fff"/>
+  <text x="50" y="550" class="row">• Starts from scratch; asks for logs</text>
+  <text x="50" y="570" class="row">• May hallucinate the framework or library</text>
+  <text x="50" y="590" class="row">• No guard against writing to .env or secrets</text>
+  <text x="50" y="610" class="row">• No structured debug report — free-form reply</text>
+  <text x="50" y="630" class="row">• You manually copy the fix into git</text>
+
+  <rect class="node" x="610" y="528" width="560" height="110" fill="#fff"/>
+  <text x="630" y="550" class="row">✓ Rule #3 → shine-debugger agent (hypothesis-driven)</text>
+  <text x="630" y="570" class="row">✓ Rule #11 → context7 for accurate lib docs (no hallucination)</text>
+  <text x="630" y="590" class="row">✓ shine-prompt-guard blocks any .env / key-shaped write (exit 2)</text>
+  <text x="630" y="610" class="row">✓ 5-section debug report (symptom · hypothesis · test · fix · verify)</text>
+  <text x="630" y="630" class="row">✓ Atomic commit with Conventional-Commits message suggested</text>
+
+  <!-- Row 4: leads -->
+  <rect x="30" y="648" width="1140" height="38" rx="10" fill="url(#prompt)"/>
+  <text x="50" y="671" class="prompt">PROMPT 4 · "Enrich this list of 40 Italian MarTech companies with contact emails."</text>
+
+  <rect class="node" x="30" y="694" width="560" height="58" fill="#fff"/>
+  <text x="50" y="716" class="row">• Guesses email patterns, no "inferred" labelling</text>
+  <text x="50" y="736" class="row">• No verified-source discipline; may invent data</text>
+
+  <rect class="node" x="610" y="694" width="560" height="58" fill="#fff"/>
+  <text x="630" y="716" class="row">✓ Rule #20 → shine-lead-enrich · Apollo + Hunter + local script</text>
+  <text x="630" y="736" class="row">✓ Watermark: verified / inferred / drafted labels on every row</text>
+</svg>

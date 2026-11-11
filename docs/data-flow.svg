@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="-apple-system,Segoe UI,Inter,sans-serif" role="img" aria-label="SHINE client data flow with GDPR retention annotations">
+  <title>SHINE — Data flow and GDPR retention</title>
+  <desc>Where client data goes, from external source (Gmail, CRM, scraping) through typed memory and skills, into artefacts on disk — with retention class annotations for GDPR compliance.</desc>
+
+  <defs>
+    <linearGradient id="src" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7ed"/><stop offset="1" stop-color="#fed7aa"/></linearGradient>
+    <linearGradient id="mem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#bfdbfe"/></linearGradient>
+    <linearGradient id="skl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f3ff"/><stop offset="1" stop-color="#ddd6fe"/></linearGradient>
+    <linearGradient id="art" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecfdf5"/><stop offset="1" stop-color="#bbf7d0"/></linearGradient>
+    <linearGradient id="disk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .band { font-size:14px; font-weight:700; letter-spacing:1px; fill:#334155; }
+      .title { font-size:22px; font-weight:700; fill:#0f172a; }
+      .sub { font-size:12px; fill:#64748b; }
+      .lbl { font-size:13px; fill:#0f172a; }
+      .tag { font-size:11px; font-weight:700; fill:#991b1b; }
+      .rtt { font-size:11px; font-weight:700; }
+      .node { rx:10; ry:10; stroke:#94a3b8; stroke-width:1; }
+      .edge { stroke:#475569; stroke-width:1.5; fill:none; marker-end:url(#a2); }
+      .chip { font-size:10px; font-weight:700; fill:#fff; }
+    </style>
+  </defs>
+
+  <text x="600" y="36" text-anchor="middle" class="title">SHINE — Client data flow · GDPR retention</text>
+  <text x="600" y="56" text-anchor="middle" class="sub">Every hop is annotated with its retention class. No field of client data leaves the user's machine unless a skill explicitly dispatches it.</text>
+
+  <!-- Band labels -->
+  <text x="100" y="100" class="band">① SOURCE</text>
+  <text x="345" y="100" class="band">② TYPED MEMORY</text>
+  <text x="620" y="100" class="band">③ SKILL / AGENT</text>
+  <text x="890" y="100" class="band">④ ARTEFACT</text>
+
+  <!-- Source column -->
+  <g>
+    <rect class="node" x="30" y="120" width="220" height="66" fill="url(#src)"/>
+    <text x="45" y="142" class="lbl" font-weight="700">Gmail MCP</text>
+    <text x="45" y="160" class="sub">kevin@instilla.it · read-only</text>
+    <text x="45" y="178" class="sub">→ thread, labels, CC rules</text>
+
+    <rect class="node" x="30" y="200" width="220" height="66" fill="url(#src)"/>
+    <text x="45" y="222" class="lbl" font-weight="700">CRM connectors</text>
+    <text x="45" y="240" class="sub">Apollo · Hunter · Close · Salesforce</text>
+    <text x="45" y="258" class="sub">→ lead fields only</text>
+
+    <rect class="node" x="30" y="280" width="220" height="66" fill="url(#src)"/>
+    <text x="45" y="302" class="lbl" font-weight="700">Web / scrape</text>
+    <text x="45" y="320" class="sub">Firecrawl · Playwright · Brightdata</text>
+    <text x="45" y="338" class="sub">→ public pages only</text>
+
+    <rect class="node" x="30" y="360" width="220" height="66" fill="url(#src)"/>
+    <text x="45" y="382" class="lbl" font-weight="700">User prompt</text>
+    <text x="45" y="400" class="sub">typed in the session</text>
+    <text x="45" y="418" class="sub">→ may include client name</text>
+
+    <rect class="node" x="30" y="440" width="220" height="66" fill="url(#src)"/>
+    <text x="45" y="462" class="lbl" font-weight="700">Asana / Linear</text>
+    <text x="45" y="480" class="sub">project state, task IDs</text>
+    <text x="45" y="498" class="sub">→ milestone, comments</text>
+  </g>
+
+  <!-- Memory column -->
+  <g>
+    <rect class="node" x="290" y="120" width="230" height="110" fill="url(#mem)"/>
+    <text x="305" y="142" class="lbl" font-weight="700">memory/client-&lt;slug&gt;.md</text>
+    <text x="305" y="160" class="sub">frontmatter: type: client</text>
+    <text x="305" y="178" class="sub">contact, tone, CC rules</text>
+    <text x="305" y="196" class="tag">Retention: until client churn</text>
+    <text x="305" y="214" class="rtt" fill="#0f766e">Class C · User-owned</text>
+
+    <rect class="node" x="290" y="244" width="230" height="110" fill="url(#mem)"/>
+    <text x="305" y="266" class="lbl" font-weight="700">memory/style-&lt;slug&gt;.md</text>
+    <text x="305" y="284" class="sub">frontmatter: type: style</text>
+    <text x="305" y="302" class="sub">auto-updated by tone-calibrator</text>
+    <text x="305" y="320" class="tag">Retention: MAX 200 entries (LRU)</text>
+    <text x="305" y="338" class="rtt" fill="#0f766e">Class C · User-owned</text>
+
+    <rect class="node" x="290" y="368" width="230" height="110" fill="url(#mem)"/>
+    <text x="305" y="390" class="lbl" font-weight="700">memory/learning-log.*</text>
+    <text x="305" y="408" class="sub">.jsonl (per turn) + .md (per session)</text>
+    <text x="305" y="426" class="sub">NO prompt content ever captured</text>
+    <text x="305" y="444" class="tag">Retention: LRU cap 10k / 1k blocks</text>
+    <text x="305" y="462" class="rtt" fill="#0f766e">Class A · Metadata only</text>
+
+    <rect class="node" x="290" y="492" width="230" height="60" fill="url(#mem)"/>
+    <text x="305" y="514" class="lbl" font-weight="700">sessions/precompact-*.md</text>
+    <text x="305" y="534" class="tag">Retention: keep-20 (LRU)</text>
+    <text x="305" y="552" class="rtt" fill="#0f766e">Class A · Metadata only</text>
+  </g>
+
+  <!-- Skill column -->
+  <g>
+    <rect class="node" x="570" y="120" width="230" height="80" fill="url(#skl)"/>
+    <text x="585" y="142" class="lbl" font-weight="700">shine-draft-email</text>
+    <text x="585" y="160" class="sub">reads: client + style + thread</text>
+    <text x="585" y="178" class="sub">writes: draft (not sent)</text>
+    <text x="585" y="196" class="rtt" fill="#b45309">Session-scoped</text>
+
+    <rect class="node" x="570" y="214" width="230" height="80" fill="url(#skl)"/>
+    <text x="585" y="236" class="lbl" font-weight="700">shine-proposal</text>
+    <text x="585" y="254" class="sub">reads: client · MoSCoW scope · MD</text>
+    <text x="585" y="272" class="sub">writes: Markdown proposal</text>
+    <text x="585" y="290" class="rtt" fill="#b45309">Session-scoped</text>
+
+    <rect class="node" x="570" y="308" width="230" height="80" fill="url(#skl)"/>
+    <text x="585" y="330" class="lbl" font-weight="700">shine-lead-enrich</text>
+    <text x="585" y="348" class="sub">reads: CSV + CRM + scrape</text>
+    <text x="585" y="366" class="sub">verified-source watermark ON</text>
+    <text x="585" y="384" class="rtt" fill="#b45309">Session-scoped</text>
+
+    <rect class="node" x="570" y="402" width="230" height="80" fill="url(#skl)"/>
+    <text x="585" y="424" class="lbl" font-weight="700">shine-gdpr-analyst</text>
+    <text x="585" y="442" class="sub">runs before any PII store</text>
+    <text x="585" y="460" class="sub">blocks or flags</text>
+    <text x="585" y="478" class="rtt" fill="#b45309">Guardrail</text>
+
+    <rect class="node" x="570" y="492" width="230" height="60" fill="url(#skl)"/>
+    <text x="585" y="514" class="lbl" font-weight="700">shine-pipeline (compose)</text>
+    <text x="585" y="532" class="sub">chains skills with scratchpad</text>
+    <text x="585" y="552" class="rtt" fill="#b45309">Session-scoped</text>
+  </g>
+
+  <!-- Artefact column -->
+  <g>
+    <rect class="node" x="850" y="120" width="230" height="100" fill="url(#art)"/>
+    <text x="865" y="142" class="lbl" font-weight="700">Email draft</text>
+    <text x="865" y="160" class="sub">Gmail "draft" API</text>
+    <text x="865" y="178" class="sub">never auto-sent</text>
+    <text x="865" y="196" class="tag">Retention: Gmail account TOS</text>
+    <text x="865" y="214" class="rtt" fill="#1e40af">Class D · External</text>
+
+    <rect class="node" x="850" y="234" width="230" height="100" fill="url(#art)"/>
+    <text x="865" y="256" class="lbl" font-weight="700">Proposal .md</text>
+    <text x="865" y="274" class="sub">written to ./proposals/</text>
+    <text x="865" y="292" class="sub">+ Sources table watermark</text>
+    <text x="865" y="310" class="tag">Retention: project lifetime</text>
+    <text x="865" y="328" class="rtt" fill="#b45309">Class B · Project</text>
+
+    <rect class="node" x="850" y="348" width="230" height="100" fill="url(#art)"/>
+    <text x="865" y="370" class="lbl" font-weight="700">Lead CSV</text>
+    <text x="865" y="388" class="sub">written to ./leads/YYYY-MM-DD/</text>
+    <text x="865" y="406" class="sub">verified fields only</text>
+    <text x="865" y="424" class="tag">Retention: 90 days default</text>
+    <text x="865" y="442" class="rtt" fill="#b45309">Class B · Project</text>
+
+    <rect class="node" x="850" y="462" width="230" height="80" fill="url(#art)"/>
+    <text x="865" y="484" class="lbl" font-weight="700">GDPR verdict</text>
+    <text x="865" y="502" class="sub">PASS / FAIL + reasons</text>
+    <text x="865" y="520" class="rtt" fill="#991b1b">Blocks downstream write</text>
+  </g>
+
+  <!-- Disk band -->
+  <rect x="30" y="580" width="1140" height="90" fill="url(#disk)" class="node"/>
+  <text x="600" y="604" text-anchor="middle" class="band">⑤ ON DISK (all local to ~/.claude or ./project)</text>
+  <text x="600" y="626" text-anchor="middle" class="lbl">~/.claude/memory/ · ~/.claude/sessions/ · ./proposals/ · ./leads/ · ./planning/ · git history</text>
+  <text x="600" y="648" text-anchor="middle" class="sub">No client data is transmitted to Anthropic beyond the minimum needed to answer the current prompt. No data persists outside the user's file system unless the user explicitly dispatches it (email send, CRM push, git push).</text>
+
+  <!-- Edges: left→right flow -->
+  <g>
+    <path class="edge" d="M 250 150 C 270 150, 275 165, 290 165"/>
+    <path class="edge" d="M 250 232 C 270 232, 275 270, 290 280"/>
+    <path class="edge" d="M 250 310 C 270 310, 275 390, 290 400"/>
+    <path class="edge" d="M 250 390 C 270 390, 275 405, 290 412"/>
+    <path class="edge" d="M 250 470 C 270 470, 275 515, 290 522"/>
+
+    <path class="edge" d="M 520 165 C 545 165, 555 155, 570 155"/>
+    <path class="edge" d="M 520 290 C 545 290, 555 250, 570 250"/>
+    <path class="edge" d="M 520 400 C 545 400, 555 345, 570 345"/>
+    <path class="edge" d="M 520 520 C 545 520, 555 440, 570 440"/>
+
+    <path class="edge" d="M 800 155 C 820 155, 830 165, 850 165"/>
+    <path class="edge" d="M 800 250 C 820 250, 830 275, 850 278"/>
+    <path class="edge" d="M 800 345 C 820 345, 830 385, 850 388"/>
+    <path class="edge" d="M 800 440 C 820 440, 830 495, 850 498"/>
+  </g>
+
+  <!-- Footer legend -->
+  <text x="30" y="696" class="sub">Legend · A = metadata-only (no content) · B = project-scoped, user-owned · C = memory, user-owned, editable · D = external (Gmail/CRM, subject to that service's TOS).</text>
+  <text x="30" y="712" class="sub">Design principles: GDPR-native · factual RAG (§16) · watermark mixed facts (§16) · tone-convergence via style-&lt;client&gt;.md · no auto-send (§Destructive actions).</text>
+</svg>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="SHINE framework — business value map">
+  <title>SHINE framework — business value map</title>
+  <defs>
+    <!-- Background grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </pattern>
+    <!-- Card shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow-blue" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3b82f6" flood-opacity="0.2"/>
+    </filter>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#71717a"/>
+    </marker>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Top Hero Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="url(#headerGrad)" stroke-bottom="#27272a"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#27272a" stroke-width="1"/>
+  
+  <!-- Header Text -->
+  <text x="40" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#f4f4f5">SHINE — turn Claude Code into your agency's operating system</text>
+  <text x="1160" y="40" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#a1a1aa">45 agents · 149 skills · 11 hooks · 16 plugins · 60+ MCPs</text>
+
+  <!-- ───── Layer 1: INPUT ───── -->
+  <!-- Container -->
+  <rect x="40" y="100" width="280" height="420" rx="12" fill="#18181b" stroke="#3f3f46" stroke-width="1" filter="url(#shadow)"/>
+  
+  <text x="180" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#fcd34d">① YOUR BUSINESS INPUT</text>
+  <text x="180" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa">plain language · any of 4 tongues</text>
+
+  <g transform="translate(60,180)" font-family="system-ui, sans-serif" font-size="13">
+    <!-- Items -->
+    <rect x="0" y="0" width="240" height="48" rx="8" fill="#27272a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="16" y="20" font-weight="600" fill="#fef3c7">📝 Client brief</text>
+    <text x="16" y="38" font-size="12" fill="#d4d4d8">"Proposta per CONTOSO SEO Q2"</text>
+
+    <rect x="0" y="60" width="240" height="48" rx="8" fill="#27272a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="16" y="80" font-weight="600" fill="#fef3c7">📬 Inbox thread</text>
+    <text x="16" y="98" font-size="12" fill="#d4d4d8">"reply to Jamie · ACME plan"</text>
+
+    <rect x="0" y="120" width="240" height="48" rx="8" fill="#27272a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="16" y="140" font-weight="600" fill="#fef3c7">📊 Lead list (CSV)</text>
+    <text x="16" y="158" font-size="12" fill="#d4d4d8">"enrich 120 prospects"</text>
+
+    <rect x="0" y="180" width="240" height="48" rx="8" fill="#27272a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="16" y="200" font-weight="600" fill="#fef3c7">🐞 Bug ticket</text>
+    <text x="16" y="218" font-size="12" fill="#d4d4d8">"checkout fails on Safari"</text>
+
+    <rect x="0" y="240" width="240" height="48" rx="8" fill="#27272a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="16" y="260" font-weight="600" fill="#fef3c7">⚖ GDPR question</text>
+    <text x="16" y="278" font-size="12" fill="#d4d4d8">"audit this scraping job"</text>
+  </g>
+
+  <!-- ARROW 1 -->
+  <line x1="330" y1="310" x2="360" y2="310" stroke="#71717a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ───── Layer 2: ENGINE ───── -->
+  <rect x="370" y="100" width="460" height="420" rx="12" fill="#18181b" stroke="#3f3f46" stroke-width="1" filter="url(#shadow)"/>
+  
+  <text x="600" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#7dd3fc">② SHINE ENGINE</text>
+  <text x="600" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa">29 decision rules · typed memory · guardrails</text>
+
+  <!-- CLAUDE.md Layer -->
+  <g transform="translate(390,170)">
+    <rect width="420" height="64" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" filter="url(#glow-blue)"/>
+    <text x="210" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f0f9ff">CLAUDE.md — 29 decision rules</text>
+    <text x="210" y="44" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#bae6fd">§16 RAG · §17 TONE · §18 GDPR · §19 PROPOSAL · §20 LEADS</text>
+    <text x="210" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#7dd3fc">§21-§29 MCP Routing (Local first → Freemium → Paid)</text>
+  </g>
+
+  <!-- Memory & Integrations -->
+  <g transform="translate(390,246)">
+    <rect width="200" height="60" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="100" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">TYPED MEMORY</text>
+    <text x="100" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">preference · client · project</text>
+    <text x="100" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">style · external</text>
+  </g>
+  <g transform="translate(610,246)">
+    <rect width="200" height="60" rx="8" fill="#27272a" stroke="#c084fc" stroke-width="0.5"/>
+    <text x="100" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#d8b4fe">60+ MCPs / PLUGINS</text>
+    <text x="100" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">Gmail · Apollo · Supabase</text>
+    <text x="100" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">Serena · DuckDB · Context7</text>
+  </g>
+
+  <!-- Execution Layer -->
+  <g transform="translate(390,318)">
+    <rect width="420" height="90" rx="8" fill="#27272a" stroke="#475569" stroke-width="0.5"/>
+    <text x="210" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#e2e8f0">EXECUTION</text>
+
+    <!-- Execution badging -->
+    <rect x="20" y="36" width="116" height="40" rx="6" fill="#082f49"/>
+    <text x="78" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e0f2fe">149 skills</text>
+    <text x="78" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#7dd3fc">commands</text>
+
+    <rect x="152" y="36" width="116" height="40" rx="6" fill="#4c1d95"/>
+    <text x="210" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#ede9fe">45 agents</text>
+    <text x="210" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#c4b5fd">sub-agent tasks</text>
+
+    <rect x="284" y="36" width="116" height="40" rx="6" fill="#14532d"/>
+    <text x="342" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#dcfce7">11 hooks</text>
+    <text x="342" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#86efac">lifecycle guards</text>
+  </g>
+
+  <!-- Guardrails Rail -->
+  <g transform="translate(390,420)">
+    <rect width="420" height="76" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+    <text x="210" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#fecaca">ALWAYS-ON GUARDRAILS</text>
+    <text x="210" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5">RAG discipline · never-auto-send · GDPR-ready</text>
+    <text x="210" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5">PreToolUse secret block · stop-on-tool-failure</text>
+    <text x="210" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5">atomic backup · cite-only-fetched</text>
+  </g>
+
+  <!-- ARROW 2 -->
+  <line x1="840" y1="310" x2="870" y2="310" stroke="#71717a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ───── Layer 3: OUTPUT ───── -->
+  <!-- Container -->
+  <rect x="880" y="100" width="280" height="420" rx="12" fill="#18181b" stroke="#3f3f46" stroke-width="1" filter="url(#shadow)"/>
+  
+  <text x="1020" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#6ee7b7">③ BUSINESS DELIVERABLES</text>
+  <text x="1020" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa">drafts you review — never auto-sent</text>
+
+  <g transform="translate(900,180)" font-family="system-ui, sans-serif" font-size="13">
+    <!-- Items -->
+    <rect x="0" y="0" width="240" height="48" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="16" y="20" font-weight="600" fill="#dcfce7">📄 Proposal</text>
+    <text x="16" y="38" font-size="12" fill="#a1a1aa">MoSCoW · MD format · 15% disc</text>
+
+    <rect x="0" y="60" width="240" height="48" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="16" y="80" font-weight="600" fill="#dcfce7">✉ Client email draft</text>
+    <text x="16" y="98" font-size="12" fill="#a1a1aa">IT/EN/FR/ES · tone + CC handled</text>
+
+    <rect x="0" y="120" width="240" height="48" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="16" y="140" font-weight="600" fill="#dcfce7">📊 Lead CSV + audit</text>
+    <text x="16" y="158" font-size="12" fill="#a1a1aa">verified-only · inferred flagged</text>
+
+    <rect x="0" y="180" width="240" height="48" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="16" y="200" font-weight="600" fill="#dcfce7">🛠 Fix + 5-section report</text>
+    <text x="16" y="218" font-size="12" fill="#a1a1aa">summary · details · sources · next</text>
+
+    <rect x="0" y="240" width="240" height="48" rx="8" fill="#27272a" stroke="#10b981" stroke-width="0.5"/>
+    <text x="16" y="260" font-weight="600" fill="#dcfce7">⚖ GDPR verdict</text>
+    <text x="16" y="278" font-size="12" fill="#a1a1aa">lawful-basis cited · action items</text>
+  </g>
+
+  <!-- ───── Bottom ROI Band ───── -->
+  <g transform="translate(40,540)">
+    <rect width="1120" height="44" rx="8" fill="#18181b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="24" y="27" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f4f4f5">📈 Business impact</text>
+    
+    <text x="180" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">⏱ 3–8× faster drafting on deliverables</text>
+    <text x="180" y="36" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">✓ tone + CC stay on-brand every time</text>
+    
+    <text x="450" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">🔒 GDPR-native, secret-blocking</text>
+    <text x="450" y="36" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">🧠 memory survives staff churn</text>
+    
+    <text x="750" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">💶 lower reviewer time per artefact</text>
+    <text x="750" y="36" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">🚀 zero tool-chain guesswork</text>
+
+    <!-- Version marker -->
+    <rect x="1030" y="12" width="70" height="20" rx="4" fill="#2563eb" opacity="0.2"/>
+    <text x="1065" y="26" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#93c5fd">v2.0.0</text>
+  </g>
+</svg>

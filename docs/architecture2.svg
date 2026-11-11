@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 940" role="img" aria-label="SHINE Architecture">
+  <title>SHINE Code System Architecture</title>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </pattern>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow-orange" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#f97316" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#71717a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="940" fill="#09090b"/>
+  <rect width="1400" height="940" fill="url(#grid)"/>
+
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="1400" height="70" fill="url(#headerGrad)" stroke-bottom="#27272a"/>
+  <line x1="0" y1="70" x2="1400" y2="70" stroke="#27272a" stroke-width="1"/>
+  <text x="40" y="44" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">✨ SHINE</text>
+  <text x="140" y="44" font-family="system-ui, sans-serif" font-size="14" fill="#a1a1aa" letter-spacing="1">ARCHITECTURE · v2.0.0</text>
+  <text x="1360" y="44" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" fill="#71717a">Strategize · Handle · Implement · Navigate · Evaluate</text>
+
+  <!-- LEFT COLUMN (Input to Brain) -->
+  <!-- 1. YOU -->
+  <circle cx="50" cy="140" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="50" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">1</text>
+  
+  <rect x="90" y="100" width="380" height="80" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1" filter="url(#shadow)"/>
+  <text x="110" y="130" font-family="system-ui, sans-serif" font-size="12" fill="#71717a">prompt</text>
+  <text x="110" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f4f4f5">"draft a proposal for CONTOSO"</text>
+  <path d="M 400 130 L 400 150 M 420 130 L 420 150" stroke="#71717a" stroke-width="1"/> <!-- placeholder icon -->
+
+  <line x1="280" y1="180" x2="280" y2="230" stroke="#71717a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 2. Settings -->
+  <circle cx="50" cy="280" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="50" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">2</text>
+
+  <rect x="90" y="240" width="380" height="100" rx="8" fill="#18181b" stroke="#0ea5e9" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="110" y="270" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#bae6fd">⚙️ settings.json</text>
+  <text x="110" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#71717a" font-style="italic">foundation · loaded at session start</text>
+  <text x="110" y="315" font-family="system-ui, sans-serif" font-size="12" fill="#d4d4d8">model · plugins · hooks · env · permissions</text>
+
+  <line x1="280" y1="340" x2="280" y2="390" stroke="#71717a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 3. Memory -->
+  <circle cx="50" cy="440" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="50" y="445" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">3</text>
+
+  <rect x="90" y="400" width="380" height="110" rx="8" fill="#18181b" stroke="#10b981" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="110" y="430" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6ee7b7">🧠 Global Memory</text>
+  <text x="110" y="450" font-family="system-ui, sans-serif" font-size="11" fill="#71717a" font-style="italic">~/.claude/memory/ · shared across all projects</text>
+  
+  <g transform="translate(110,470)">
+    <rect x="0" y="0" width="65" height="20" rx="4" fill="#27272a"/>
+    <text x="32" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#d4d4d8">preference</text>
+    
+    <rect x="75" y="0" width="45" height="20" rx="4" fill="#27272a"/>
+    <text x="97" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#d4d4d8">client</text>
+
+    <rect x="130" y="0" width="50" height="20" rx="4" fill="#27272a"/>
+    <text x="155" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#d4d4d8">project</text>
+
+    <rect x="190" y="0" width="40" height="20" rx="4" fill="#27272a"/>
+    <text x="210" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#d4d4d8">style</text>
+
+    <rect x="240" y="0" width="55" height="20" rx="4" fill="#27272a"/>
+    <text x="267" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#d4d4d8">external</text>
+  </g>
+
+  <!-- Connect to Brain -->
+  <line x1="470" y1="450" x2="600" y2="450" stroke="#71717a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- CENTER: THE BRAIN -->
+  <circle cx="50" cy="620" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="50" y="625" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">4</text>
+
+  <g transform="translate(620,330)">
+    <!-- Hexagon alternative: large shiny card -->
+    <rect width="280" height="240" rx="16" fill="#18181b" stroke="#f97316" stroke-width="1.5" filter="url(#glow-orange)"/>
+    
+    <text x="140" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fdba74" letter-spacing="2">THE BRAIN</text>
+    <text x="140" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">CLAUDE.md</text>
+    <text x="140" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fed7aa" font-style="italic">16 sections · 29 rules</text>
+
+    <text x="140" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#d4d4d8">pattern-matches every prompt to</text>
+    <text x="140" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#d4d4d8">the right tool chain — automatically</text>
+    <text x="140" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#71717a">no manual tool selection</text>
+
+    <rect x="20" y="190" width="240" height="30" rx="15" fill="#27272a"/>
+    <text x="140" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#fdba74">29 DECISION RULES</text>
+  </g>
+
+  <!-- Connect to Execution (right side) -->
+  <path d="M 900 370 Q 940 370 980 300" stroke="#f97316" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 900 410 Q 940 410 980 430" stroke="#f97316" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 900 450 Q 940 450 980 480" stroke="#f97316" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 900 490 Q 940 490 980 600" stroke="#f97316" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- RIGHT COLUMN: EXECUTION -->
+  <circle cx="1350" cy="450" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="1350" y="455" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">5</text>
+
+  <!-- Skills -->
+  <rect x="980" y="200" width="320" height="130" rx="8" fill="#18181b" stroke="#e11d48" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="1000" y="235" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#fda4af">🧩 SKILLS</text>
+  <text x="1270" y="240" text-anchor="end" font-family="system-ui, sans-serif" font-size="34" font-weight="800" fill="#f43f5e">149</text>
+  <text x="1000" y="260" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa">slash commands · 10 categories</text>
+  <text x="1000" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">42 core SHINE · 17 early-agency · 10 marketing</text>
+  <text x="1000" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">10 sales · 11 consulting · 10 tech · 8 ops</text>
+  <text x="1000" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">7 data · 4 brand · 30 misc</text>
+
+  <!-- Agents -->
+  <rect x="980" y="350" width="320" height="100" rx="8" fill="#18181b" stroke="#8b5cf6" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="1000" y="385" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#d8b4fe">🤖 AGENTS</text>
+  <text x="1270" y="390" text-anchor="end" font-family="system-ui, sans-serif" font-size="34" font-weight="800" fill="#8b5cf6">45</text>
+  <text x="1000" y="415" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">21 engineering · 18 agency</text>
+  <text x="1000" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">6 MCP-capable (web, data, security...)</text>
+
+  <!-- Hooks -->
+  <rect x="980" y="470" width="320" height="110" rx="8" fill="#18181b" stroke="#3b82f6" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="1000" y="505" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#bfdbfe">🪝 HOOKS</text>
+  <text x="1270" y="510" text-anchor="end" font-family="system-ui, sans-serif" font-size="34" font-weight="800" fill="#3b82f6">11</text>
+  <text x="1000" y="535" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">3× SessionStart · 2× UserPromptSubmit</text>
+  <text x="1000" y="550" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">2× PreToolUse · 1× PostToolUse</text>
+  <text x="1000" y="565" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">1× PreCompact · 1× Stop · 1× SessionEnd</text>
+
+  <!-- Plugins & MCP -->
+  <rect x="980" y="600" width="320" height="110" rx="8" fill="#18181b" stroke="#10b981" stroke-width="0.5" filter="url(#shadow)"/>
+  <text x="1000" y="635" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#a7f3d0">🔌 PLUGINS &amp; MCP</text>
+  <text x="1270" y="640" text-anchor="end" font-family="system-ui, sans-serif" font-size="34" font-weight="800" fill="#10b981">16+</text>
+  <text x="1000" y="665" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa">bundled · user-scoped MCPs routed via rules</text>
+  <text x="1000" y="685" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">16 plugins (serena, playwright, lsp...)</text>
+  <text x="1000" y="700" font-family="system-ui, sans-serif" font-size="11" fill="#d4d4d8">60+ mapped MCP servers (Tier 1/2/3)</text>
+
+  <!-- BOTTOM: GUARDRAILS -->
+  <circle cx="50" cy="800" r="14" fill="#18181b" stroke="#3f3f46"/>
+  <text x="50" y="805" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a1a1aa">6</text>
+
+  <rect x="90" y="760" width="1210" height="100" rx="12" fill="#18181b" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- diagonal warning stripe -->
+  <defs>
+    <pattern id="warning" width="20" height="20" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="20" fill="#f59e0b" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect x="90" y="760" width="1210" height="20" rx="12" fill="url(#warning)"/>
+  
+  <text x="695" y="774" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="800" fill="#f59e0b" letter-spacing="2">ALWAYS-ON AGENCY GUARDRAILS</text>
+
+  <!-- Pills -->
+  <g transform="translate(110, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">🔬 Factual RAG</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">every claim cited</text>
+  </g>
+  <g transform="translate(305, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">✉️ Never auto-send</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">drafts only, human check</text>
+  </g>
+  <g transform="translate(500, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">🔒 PII-aware</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">§18 GDPR audit path</text>
+  </g>
+  <g transform="translate(695, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">💾 Atomic backup</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">snapshot on update</text>
+  </g>
+  <g transform="translate(890, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">🌍 IT·FR·EN·ES</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">client tone rules</text>
+  </g>
+  <g transform="translate(1085, 796)">
+    <rect width="180" height="40" rx="20" fill="#27272a" stroke="#d97706" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fef3c7">🚫 Tiered Fallback</text>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a1a1aa">free → freemium → paid</text>
+  </g>
+
+  <!-- Document Signature -->
+  <text x="1360" y="920" text-anchor="end" font-family="system-ui, sans-serif" font-size="11" fill="#52525b">docs/architecture.svg · CC0 1.0</text>
+</svg>

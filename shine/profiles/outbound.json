@@ -1,0 +1,13 @@
+{
+  "name": "outbound",
+  "description": "Prospecting + outreach. context7 for docs. Keeps Apollo, Gmail, Common Room. ~35k context.",
+  "estimatedContextTokens": 35000,
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true
+  },
+  "disabledMcpjsonServers": [
+    "Ahrefs", "Postman", "Supabase", "Kubernetes_MCP_Server",
+    "AWS_API_MCP_Server", "Figma", "Hugging_Face", "Blockscout",
+    "Desktop_Commander"
+  ]
+}

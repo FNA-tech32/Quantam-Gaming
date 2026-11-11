@@ -1,0 +1,7 @@
+{
+  "name": "minimal",
+  "description": "No plugins. Pure SHINE (141 skills + 47 agents + hooks). ~15k context.",
+  "estimatedContextTokens": 15000,
+  "enabledPlugins": {},
+  "disabledMcpjsonServers": []
+}

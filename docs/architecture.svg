@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 940" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="soft" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Warmer, teal/coral palette to differentiate -->
+    <linearGradient id="g-input" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset="1" stop-color="#155e75"/>
+    </linearGradient>
+    <linearGradient id="g-mem" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="g-brain" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fb923c"/>
+      <stop offset="0.5" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="g-skills" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f43f5e"/>
+      <stop offset="1" stop-color="#be123c"/>
+    </linearGradient>
+    <linearGradient id="g-agents" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="g-plugins" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="g-hooks" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#64748b"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="g-rail" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset="0.5" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fcd34d"/>
+    </linearGradient>
+
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+    </pattern>
+
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background with grid -->
+  <rect width="1400" height="940" fill="#fafaf9"/>
+  <rect width="1400" height="940" fill="url(#grid)"/>
+
+  <!-- Title strip -->
+  <rect x="0" y="0" width="1400" height="70" fill="#0f172a"/>
+  <text x="40" y="42" font-size="22" font-weight="800" fill="#fef3c7">✨  SHINE</text>
+  <text x="140" y="42" font-size="14" fill="#fde68a" letter-spacing="1">ARCHITECTURE  ·  v1.0.0</text>
+  <text x="1360" y="42" text-anchor="end" font-size="11" fill="#94a3b8">Strategize · Handle · Implement · Navigate · Evaluate</text>
+  <line x1="40" y1="58" x2="1360" y2="58" stroke="#334155" stroke-width="1"/>
+
+  <!-- ============================================================= -->
+  <!-- LEFT COLUMN — INPUT PIPELINE                                   -->
+  <!-- ============================================================= -->
+
+  <!-- Stage marker 1 -->
+  <circle cx="50" cy="140" r="18" fill="#0f172a"/>
+  <text x="50" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">1</text>
+
+  <!-- YOU icon -->
+  <g transform="translate(120,105)">
+    <circle cx="40" cy="25" r="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+    <path d="M 22 43 L 22 70 M 58 43 L 58 70 M 22 55 L 58 55 M 40 43 L 40 70 M 30 85 L 40 70 L 50 85" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="40" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">YOU</text>
+  </g>
+
+  <!-- Prompt callout -->
+  <g transform="translate(230,115)">
+    <rect width="230" height="64" rx="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#soft)"/>
+    <text x="25" y="30" font-size="11" fill="#64748b">prompt</text>
+    <text x="25" y="48" font-size="13" font-weight="600" fill="#0f172a">"draft a proposal for CONTOSO"</text>
+    <text x="25" y="58" font-size="9" fill="#94a3b8">(natural language, any of 4 languages)</text>
+  </g>
+
+  <!-- Arrow to Stage 2 -->
+  <path d="M 345 185 Q 345 210 345 225" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Stage marker 2 -->
+  <circle cx="50" cy="290" r="18" fill="#0f172a"/>
+  <text x="50" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">2</text>
+
+  <!-- Foundation card -->
+  <g transform="translate(95,235)">
+    <rect width="380" height="100" rx="12" fill="url(#g-input)" filter="url(#soft)"/>
+    <text x="25" y="32" font-size="14" font-weight="700" fill="#ffffff">⚙️  settings.json</text>
+    <text x="25" y="50" font-size="10" fill="#a5f3fc" font-style="italic">foundation · loaded at session start</text>
+    <text x="25" y="72" font-size="11" fill="#ffffff">model · plugins · hooks · env · permissions</text>
+    <text x="25" y="87" font-size="10" fill="#cffafe">Telemetry OFF by default · atomic backup on install</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 285 345 Q 285 360 285 375" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Stage marker 3 -->
+  <circle cx="50" cy="430" r="18" fill="#0f172a"/>
+  <text x="50" y="436" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">3</text>
+
+  <!-- Memory card -->
+  <g transform="translate(95,380)">
+    <rect width="380" height="115" rx="12" fill="url(#g-mem)" filter="url(#soft)"/>
+    <text x="25" y="32" font-size="14" font-weight="700" fill="#ffffff">🧠  Global Memory</text>
+    <text x="25" y="50" font-size="10" fill="#99f6e4" font-style="italic">~/.claude/memory/ · shared across all projects</text>
+    <text x="25" y="74" font-size="11" fill="#ffffff">typed index · lazy-loaded by rule match</text>
+    <g font-size="9" font-weight="600">
+      <rect x="25" y="84" width="62" height="18" rx="9" fill="#ffffff" opacity="0.2"/>
+      <text x="56" y="96" text-anchor="middle" fill="#ffffff">preference</text>
+      <rect x="92" y="84" width="44" height="18" rx="9" fill="#ffffff" opacity="0.2"/>
+      <text x="114" y="96" text-anchor="middle" fill="#ffffff">client</text>
+      <rect x="141" y="84" width="50" height="18" rx="9" fill="#ffffff" opacity="0.2"/>
+      <text x="166" y="96" text-anchor="middle" fill="#ffffff">project</text>
+      <rect x="196" y="84" width="42" height="18" rx="9" fill="#ffffff" opacity="0.2"/>
+      <text x="217" y="96" text-anchor="middle" fill="#ffffff">style</text>
+      <rect x="243" y="84" width="56" height="18" rx="9" fill="#ffffff" opacity="0.2"/>
+      <text x="271" y="96" text-anchor="middle" fill="#ffffff">external</text>
+    </g>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- CENTER — THE BRAIN (Hexagon)                                   -->
+  <!-- ============================================================= -->
+
+  <!-- Stage marker 4 -->
+  <circle cx="50" cy="580" r="18" fill="#0f172a"/>
+  <text x="50" y="586" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">4</text>
+
+  <!-- Hexagon for CLAUDE.md -->
+  <g transform="translate(700,410)">
+    <!-- outer glow -->
+    <polygon points="0,-170 147,-85 147,85 0,170 -147,85 -147,-85"
+             fill="url(#g-brain)" stroke="#c2410c" stroke-width="3" filter="url(#soft)" opacity="0.97"/>
+    <!-- inner hex -->
+    <polygon points="0,-145 125,-72 125,72 0,145 -125,72 -125,-72"
+             fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.35"/>
+
+    <text x="0" y="-105" text-anchor="middle" font-size="11" fill="#fed7aa" letter-spacing="3">THE BRAIN</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">CLAUDE.md</text>
+    <text x="0" y="-56" text-anchor="middle" font-size="11" fill="#fed7aa" font-style="italic">16 sections · 20 rules</text>
+
+    <text x="0" y="-25" text-anchor="middle" font-size="11" fill="#ffffff">pattern-matches every prompt to</text>
+    <text x="0" y="-9" text-anchor="middle" font-size="11" fill="#ffffff">the right tool chain — automatically</text>
+
+    <!-- Rule band: 20 dots -->
+    <g transform="translate(0,18)">
+      <text x="0" y="-2" text-anchor="middle" font-size="9" fill="#fed7aa" letter-spacing="1">20 DECISION RULES</text>
+      <!-- 15 engineering -->
+      <g>
+        <circle cx="-100" cy="14" r="5" fill="#ffffff"/><circle cx="-86" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="-72" cy="14" r="5" fill="#ffffff"/><circle cx="-58" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="-44" cy="14" r="5" fill="#ffffff"/><circle cx="-30" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="-16" cy="14" r="5" fill="#ffffff"/><circle cx="-2" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="12" cy="14" r="5" fill="#ffffff"/><circle cx="26" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="40" cy="14" r="5" fill="#ffffff"/><circle cx="54" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="68" cy="14" r="5" fill="#ffffff"/><circle cx="82" cy="14" r="5" fill="#ffffff"/>
+        <circle cx="96" cy="14" r="5" fill="#ffffff"/>
+      </g>
+      <!-- 5 agency (highlighted red) -->
+      <g>
+        <circle cx="-44" cy="30" r="6.5" fill="#fecaca" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="-22" cy="30" r="6.5" fill="#fecaca" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="0" cy="30" r="6.5" fill="#fecaca" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="22" cy="30" r="6.5" fill="#fecaca" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="44" cy="30" r="6.5" fill="#fecaca" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="0" y="50" text-anchor="middle" font-size="9" fill="#fecaca" font-weight="700">§16 RAG · §17 TONE · §18 GDPR · §19 PROPOSAL · §20 LEADS</text>
+      </g>
+    </g>
+
+    <text x="0" y="115" text-anchor="middle" font-size="9.5" fill="#fed7aa" letter-spacing="1.5">NO MANUAL TOOL SELECTION</text>
+  </g>
+
+  <!-- Spoke lines from brain to execution boxes -->
+  <g stroke="#fb923c" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M 845 345 Q 920 330 990 295"/>
+    <path d="M 845 475 Q 920 500 990 535"/>
+    <path d="M 553 345 Q 480 320 415 300"/>
+    <path d="M 553 475 Q 480 505 415 540"/>
+  </g>
+
+  <!-- Arrows memory → brain -->
+  <path d="M 478 440 Q 530 430 557 420" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- ============================================================= -->
+  <!-- RIGHT — 4 EXECUTION QUADRANTS                                  -->
+  <!-- ============================================================= -->
+
+  <!-- Stage marker 5 -->
+  <circle cx="1350" cy="470" r="18" fill="#0f172a"/>
+  <text x="1350" y="476" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">5</text>
+
+  <!-- Top-Right: Skills -->
+  <g transform="translate(990,240)">
+    <rect width="310" height="130" rx="14" fill="url(#g-skills)" filter="url(#soft)"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#ffffff">🧩  SKILLS</text>
+    <text x="290" y="30" text-anchor="end" font-size="34" font-weight="800" fill="#ffffff">139</text>
+    <text x="20" y="52" font-size="9.5" fill="#fecaca">slash commands · 8 categories</text>
+    <g font-size="9" fill="#ffffff">
+      <text x="20" y="72">61 core · 17 early-agency</text>
+      <text x="20" y="86">10 marketing · 10 sales</text>
+      <text x="20" y="100">10 consulting · 10 tech</text>
+      <text x="20" y="114">8 ops · 6 data · 7 brand/misc</text>
+    </g>
+  </g>
+
+  <!-- Bottom-Right: Plugins -->
+  <g transform="translate(990,500)">
+    <rect width="310" height="130" rx="14" fill="url(#g-plugins)" filter="url(#soft)"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#ffffff">🔌  PLUGINS  &amp;  MCP</text>
+    <text x="290" y="30" text-anchor="end" font-size="34" font-weight="800" fill="#ffffff">16</text>
+    <text x="20" y="52" font-size="9.5" fill="#ddd6fe">bundled · user-scoped MCPs route via rules</text>
+    <g font-size="9" fill="#ffffff">
+      <text x="20" y="72">11 official: serena · context7</text>
+      <text x="20" y="86">   playwright · supabase · LSPs</text>
+      <text x="20" y="100">2 LSP (pyright · basedpyright)</text>
+      <text x="20" y="114">3 third-party: ui-ux-max · mem · arize</text>
+    </g>
+  </g>
+
+  <!-- Top-Left (of right block): Agents -->
+  <g transform="translate(100,240)">
+    <rect width="310" height="130" rx="14" fill="url(#g-agents)" filter="url(#soft)"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#ffffff">🤖  AGENTS</text>
+    <text x="290" y="30" text-anchor="end" font-size="34" font-weight="800" fill="#ffffff">39</text>
+    <text x="20" y="52" font-size="9.5" fill="#99f6e4">sub-agents · 5-section report</text>
+    <g font-size="9" fill="#ffffff">
+      <text x="20" y="72">21 engineering (planner · executor</text>
+      <text x="20" y="86">   verifier · debugger · auditors)</text>
+      <text x="20" y="100">18 agency (proposal · GDPR · SEO</text>
+      <text x="20" y="114">   MarTech · copywriter · account…)</text>
+    </g>
+  </g>
+
+  <!-- Bottom-Left (of right block): Hooks -->
+  <g transform="translate(100,500)">
+    <rect width="310" height="130" rx="14" fill="url(#g-hooks)" filter="url(#soft)"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#ffffff">🪝  HOOKS</text>
+    <text x="290" y="30" text-anchor="end" font-size="34" font-weight="800" fill="#ffffff">7</text>
+    <text x="20" y="52" font-size="9.5" fill="#cbd5e1">lifecycle · fail-open (1 fail-closed)</text>
+    <g font-size="9" fill="#ffffff">
+      <text x="20" y="72">3× SessionStart (memory, update, sync)</text>
+      <text x="20" y="86">2× PreToolUse (prompt-guard 🛡️, read)</text>
+      <text x="20" y="100">1× PostToolUse (context monitor)</text>
+      <text x="20" y="114">1× PreCompact (snapshot — new)</text>
+    </g>
+  </g>
+
+  <!-- Small note between brain and right column -->
+  <g transform="translate(855,680)">
+    <text x="0" y="0" font-size="10" fill="#64748b" font-style="italic">→ rule match fires the right combination</text>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- BOTTOM STRIP — GUARDRAILS (Alert-yellow, different texture)    -->
+  <!-- ============================================================= -->
+
+  <!-- Stage marker 6 -->
+  <circle cx="50" cy="760" r="18" fill="#0f172a"/>
+  <text x="50" y="766" text-anchor="middle" font-size="14" font-weight="700" fill="#fef3c7">6</text>
+
+  <g transform="translate(95,710)">
+    <rect width="1255" height="120" rx="14" fill="url(#g-rail)" stroke="#d97706" stroke-width="1.5" filter="url(#soft)"/>
+    <!-- Diagonal stripe pattern -->
+    <defs>
+      <pattern id="stripes" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+        <rect width="5" height="10" fill="#fbbf24" opacity="0.25"/>
+      </pattern>
+    </defs>
+    <rect width="1255" height="28" rx="14" fill="url(#stripes)"/>
+    <text x="627" y="19" text-anchor="middle" font-size="11" font-weight="800" fill="#78350f" letter-spacing="3">ALWAYS-ON  AGENCY  GUARDRAILS</text>
+
+    <!-- 6 guardrails as pills -->
+    <g font-size="11" fill="#78350f">
+      <g transform="translate(40,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">🔬</text>
+        <text x="45" y="20" font-weight="700">Factual RAG</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">every claim cited, live source</text>
+      </g>
+      <g transform="translate(240,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">✉️</text>
+        <text x="45" y="20" font-weight="700">Never auto-send</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">draft files only, human review</text>
+      </g>
+      <g transform="translate(440,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">🔒</text>
+        <text x="45" y="20" font-weight="700">PII-aware</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">§18 intercept · GDPR check</text>
+      </g>
+      <g transform="translate(640,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">💾</text>
+        <text x="45" y="20" font-weight="700">Atomic backup</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">snapshot before every update</text>
+      </g>
+      <g transform="translate(840,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">🌍</text>
+        <text x="45" y="20" font-weight="700">IT · FR · EN · ES</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">client-aware tone switch</text>
+      </g>
+      <g transform="translate(1040,55)">
+        <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+        <text x="20" y="22" font-size="16">🔄</text>
+        <text x="45" y="20" font-weight="700">Reversible</text>
+        <text x="45" y="35" font-size="9" fill="#92400e">one-command uninstall</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Lifecycle legend strip -->
+  <g transform="translate(95,860)">
+    <text x="0" y="14" font-size="10" font-weight="700" fill="#334155" letter-spacing="2">LIFECYCLE</text>
+    <g font-size="10.5" fill="#334155">
+      <circle cx="110" cy="10" r="10" fill="#0f172a"/><text x="110" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">1</text>
+      <text x="127" y="14">Prompt</text>
+      <circle cx="220" cy="10" r="10" fill="#0f172a"/><text x="220" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">2</text>
+      <text x="237" y="14">Config loaded</text>
+      <circle cx="370" cy="10" r="10" fill="#0f172a"/><text x="370" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">3</text>
+      <text x="387" y="14">Memory injected</text>
+      <circle cx="540" cy="10" r="10" fill="#0f172a"/><text x="540" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">4</text>
+      <text x="557" y="14">Rule match (CLAUDE.md)</text>
+      <circle cx="770" cy="10" r="10" fill="#0f172a"/><text x="770" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">5</text>
+      <text x="787" y="14">Execution (skills / agents / plugins / hooks)</text>
+      <circle cx="1095" cy="10" r="10" fill="#0f172a"/><text x="1095" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fef3c7">6</text>
+      <text x="1112" y="14">Guardrails on every output</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="1360" y="915" text-anchor="end" font-size="10" fill="#94a3b8">docs/architecture.svg  ·  CC0 1.0</text>
+</svg>

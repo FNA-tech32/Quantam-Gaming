@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# SHINE — top-level CLI shim. Dispatches to subcommands.
+# Install location: ~/.claude/shine/bin/shine
+# Add ~/.claude/shine/bin to PATH to call `shine` directly.
+
+set -euo pipefail
+
+SHINE_BIN="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CMD="${1:-help}"
+shift || true
+
+case "$CMD" in
+  activate|list|show|current)
+    exec node "$SHINE_BIN/shine-profile.cjs" "$CMD" "$@"
+    ;;
+  doctor|onboard|help|index-skills|--version|-v)
+    exec node "$SHINE_BIN/shine-tools.cjs" "$CMD" "$@"
+    ;;
+  profile)
+    # `shine profile list` etc.
+    exec node "$SHINE_BIN/shine-profile.cjs" "$@"
+    ;;
+  *)
+    cat <<EOF
+shine — SHINE Claude Code Framework CLI
+
+Profile management:
+  shine list                     List available profiles
+  shine activate <name>          Switch to a profile (minimal|writing|outbound|seo|dev|full)
+  shine current                  Show which plugins/MCPs are currently enabled
+  shine show <name>              Display a profile's contents
+
+Framework tools:
+  shine doctor                   Print a JSON health report
+  shine onboard                  First-run memory wizard
+  shine index-skills             Regenerate skills/INDEX.md
+  shine --version                Print version
+
+EOF
+    exit 2
+    ;;
+esac

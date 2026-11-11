@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="g-col1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="g-col2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <linearGradient id="g-col3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="g-col4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="980" fill="#f8fafc"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1400" height="70" fill="#0f172a"/>
+  <text x="40" y="32" font-size="20" font-weight="bold" fill="#fbbf24">✨ SHINE — How to Use</text>
+  <text x="40" y="54" font-size="12" fill="#cbd5e1">Four real journeys · from your prompt to a shipped artifact</text>
+  <text x="1360" y="42" text-anchor="end" font-size="12" fill="#94a3b8">prompt → rule → memory + MCP → skill / agent → artifact</text>
+
+  <!-- Always-on guardrails band -->
+  <rect x="20" y="86" width="1360" height="50" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="40" y="106" font-size="12" font-weight="bold" fill="#991b1b">⚠ ALWAYS-ON GUARDRAILS</text>
+  <text x="40" y="124" font-size="11" fill="#7f1d1d">Every flow below is gated by these — no exceptions.</text>
+
+  <g font-size="10.5" font-weight="bold" fill="#ffffff">
+    <rect x="230" y="96" width="130" height="30" rx="15" fill="#dc2626"/>
+    <text x="295" y="115" text-anchor="middle">RAG only · no hallucination</text>
+
+    <rect x="370" y="96" width="140" height="30" rx="15" fill="#ea580c"/>
+    <text x="440" y="115" text-anchor="middle">Dry-run before auto-send</text>
+
+    <rect x="520" y="96" width="110" height="30" rx="15" fill="#d97706"/>
+    <text x="575" y="115" text-anchor="middle">GDPR · PII redact</text>
+
+    <rect x="640" y="96" width="130" height="30" rx="15" fill="#ca8a04"/>
+    <text x="705" y="115" text-anchor="middle">Tone: IT client / EN int'l</text>
+
+    <rect x="780" y="96" width="160" height="30" rx="15" fill="#16a34a"/>
+    <text x="860" y="115" text-anchor="middle">Cite only fetched sources</text>
+
+    <rect x="950" y="96" width="170" height="30" rx="15" fill="#0891b2"/>
+    <text x="1035" y="115" text-anchor="middle">Stop if tool fails — no guessing</text>
+
+    <rect x="1130" y="96" width="230" height="30" rx="15" fill="#7c3aed"/>
+    <text x="1245" y="115" text-anchor="middle">Secrets blocked by PreToolUse hook</text>
+  </g>
+
+  <!-- Timeline spine labels (left) -->
+  <g font-size="11" font-weight="bold" fill="#475569">
+    <text x="40" y="200" text-anchor="start">① You type</text>
+    <text x="40" y="310" text-anchor="start">② Rule fires</text>
+    <text x="40" y="430" text-anchor="start">③ Context loaded</text>
+    <text x="40" y="570" text-anchor="start">④ Skill + agent</text>
+    <text x="40" y="720" text-anchor="start">⑤ Output</text>
+    <text x="40" y="860" text-anchor="start">⑥ You approve</text>
+  </g>
+  <line x1="150" y1="170" x2="150" y2="890" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ================= COLUMN 1: PROPOSAL ================= -->
+  <g transform="translate(180,160)">
+    <rect x="0" y="0" width="280" height="760" rx="14" fill="url(#g-col1)" stroke="#f59e0b" stroke-width="2" filter="url(#soft)"/>
+    <rect x="0" y="0" width="280" height="38" rx="14" fill="#b45309"/>
+    <text x="140" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#fffbeb">📄 PROPOSAL · CONTOSO</text>
+
+    <!-- Prompt -->
+    <rect x="15" y="54" width="250" height="60" rx="8" fill="#ffffff" stroke="#f59e0b"/>
+    <text x="25" y="72" font-size="10" font-weight="bold" fill="#92400e">PROMPT</text>
+    <text x="25" y="92" font-size="11" fill="#1e293b">"Proposta per CONTOSO,</text>
+    <text x="25" y="106" font-size="11" fill="#1e293b">tech SEO + semantic Q2"</text>
+
+    <!-- Rule -->
+    <rect x="60" y="148" width="160" height="40" rx="20" fill="#b45309"/>
+    <text x="140" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Rule §19 — Proposal</text>
+
+    <!-- Memory/MCP -->
+    <rect x="15" y="218" width="250" height="92" rx="8" fill="#ffffff" stroke="#f59e0b"/>
+    <text x="25" y="236" font-size="10" font-weight="bold" fill="#92400e">LOADED</text>
+    <text x="25" y="254" font-size="10.5" fill="#1e293b">📇 memory/client-stef.md</text>
+    <text x="25" y="270" font-size="10.5" fill="#1e293b">🎨 memory/style-proposal.md</text>
+    <text x="25" y="286" font-size="10.5" fill="#1e293b">🔌 Asana MCP · context</text>
+    <text x="25" y="302" font-size="10.5" fill="#1e293b">📝 past proposals (retro)</text>
+
+    <!-- Skill+agent -->
+    <rect x="15" y="340" width="250" height="110" rx="8" fill="#78350f"/>
+    <text x="25" y="358" font-size="10" font-weight="bold" fill="#fde68a">SKILL + AGENT</text>
+    <text x="25" y="378" font-size="11" fill="#ffffff">/shine-proposal</text>
+    <text x="25" y="395" font-size="11" fill="#ffffff">+ shine-proposal-writer</text>
+    <text x="25" y="415" font-size="10" fill="#fcd34d">• MoSCoW must/should/could</text>
+    <text x="25" y="430" font-size="10" fill="#fcd34d">• MD estimate (8h)</text>
+    <text x="25" y="445" font-size="10" fill="#fcd34d">• ~15% discount option</text>
+
+    <!-- Output -->
+    <rect x="15" y="482" width="250" height="96" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="25" y="500" font-size="10" font-weight="bold" fill="#92400e">OUTPUT (Italian)</text>
+    <text x="25" y="520" font-size="11" fill="#1e293b">./proposals/stef-seo-q2.md</text>
+    <text x="25" y="540" font-size="10" fill="#475569">Ciao Roberto, spero tutto</text>
+    <text x="25" y="555" font-size="10" fill="#475569">bene! Allego la proposta</text>
+    <text x="25" y="570" font-size="10" fill="#475569">per il Q2 · A presto, K</text>
+
+    <!-- Approval -->
+    <rect x="15" y="610" width="250" height="60" rx="8" fill="#fffbeb" stroke="#b45309" stroke-dasharray="4,3"/>
+    <text x="140" y="632" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">YOU REVIEW</text>
+    <text x="140" y="650" text-anchor="middle" font-size="10" fill="#78350f">→ propose call before send</text>
+    <text x="140" y="664" text-anchor="middle" font-size="10" fill="#78350f">never cold-ship docs</text>
+
+    <!-- connector arrows between blocks -->
+    <line x1="140" y1="114" x2="140" y2="145" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="188" x2="140" y2="215" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="310" x2="140" y2="337" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="450" x2="140" y2="479" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="578" x2="140" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ================= COLUMN 2: CLIENT EMAIL ================= -->
+  <g transform="translate(480,160)">
+    <rect x="0" y="0" width="280" height="760" rx="14" fill="url(#g-col2)" stroke="#10b981" stroke-width="2" filter="url(#soft)"/>
+    <rect x="0" y="0" width="280" height="38" rx="14" fill="#047857"/>
+    <text x="140" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#ecfdf5">✉ CLIENT EMAIL · ACME</text>
+
+    <!-- Prompt -->
+    <rect x="15" y="54" width="250" height="60" rx="8" fill="#ffffff" stroke="#10b981"/>
+    <text x="25" y="72" font-size="10" font-weight="bold" fill="#065f46">PROMPT</text>
+    <text x="25" y="92" font-size="11" fill="#1e293b">"reply a Jamie · piano</text>
+    <text x="25" y="106" font-size="11" fill="#1e293b">link-building di ottobre"</text>
+
+    <!-- Rule -->
+    <rect x="60" y="148" width="160" height="40" rx="20" fill="#047857"/>
+    <text x="140" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Rule §17 — Email</text>
+
+    <!-- Loaded -->
+    <rect x="15" y="218" width="250" height="92" rx="8" fill="#ffffff" stroke="#10b981"/>
+    <text x="25" y="236" font-size="10" font-weight="bold" fill="#065f46">LOADED</text>
+    <text x="25" y="254" font-size="10.5" fill="#1e293b">📇 memory/client-acme.md</text>
+    <text x="25" y="270" font-size="10.5" fill="#1e293b">🎨 memory/style-email-it.md</text>
+    <text x="25" y="286" font-size="10.5" fill="#1e293b">📬 Gmail MCP · last thread</text>
+    <text x="25" y="302" font-size="10.5" fill="#1e293b">👥 CC list (Alex, Morgan)</text>
+
+    <!-- Skill+agent -->
+    <rect x="15" y="340" width="250" height="110" rx="8" fill="#064e3b"/>
+    <text x="25" y="358" font-size="10" font-weight="bold" fill="#bbf7d0">SKILL + AGENT</text>
+    <text x="25" y="378" font-size="11" fill="#ffffff">/draft-email</text>
+    <text x="25" y="395" font-size="11" fill="#ffffff">+ shine-email-writer</text>
+    <text x="25" y="415" font-size="10" fill="#86efac">• subject: ACME | Topic</text>
+    <text x="25" y="430" font-size="10" fill="#86efac">• warm IT opening</text>
+    <text x="25" y="445" font-size="10" fill="#86efac">• bullet ask → A presto, K</text>
+
+    <!-- Output -->
+    <rect x="15" y="482" width="250" height="96" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+    <text x="25" y="500" font-size="10" font-weight="bold" fill="#065f46">DRAFT (Gmail MCP)</text>
+    <text x="25" y="520" font-size="11" fill="#1e293b">ACME | Piano ottobre</text>
+    <text x="25" y="540" font-size="10" fill="#475569">Ciao Jamie, spero tutto</text>
+    <text x="25" y="555" font-size="10" fill="#475569">bene! Ti riepilogo qui gli</text>
+    <text x="25" y="570" font-size="10" fill="#475569">aggiornamenti del mese…</text>
+
+    <!-- Approval -->
+    <rect x="15" y="610" width="250" height="60" rx="8" fill="#ecfdf5" stroke="#047857" stroke-dasharray="4,3"/>
+    <text x="140" y="632" text-anchor="middle" font-size="11" font-weight="bold" fill="#064e3b">YOU REVIEW</text>
+    <text x="140" y="650" text-anchor="middle" font-size="10" fill="#064e3b">→ draft stays in Gmail</text>
+    <text x="140" y="664" text-anchor="middle" font-size="10" fill="#064e3b">never auto-send</text>
+
+    <line x1="140" y1="114" x2="140" y2="145" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="188" x2="140" y2="215" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="310" x2="140" y2="337" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="450" x2="140" y2="479" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="578" x2="140" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ================= COLUMN 3: DEBUG ================= -->
+  <g transform="translate(780,160)">
+    <rect x="0" y="0" width="280" height="760" rx="14" fill="url(#g-col3)" stroke="#3b82f6" stroke-width="2" filter="url(#soft)"/>
+    <rect x="0" y="0" width="280" height="38" rx="14" fill="#1d4ed8"/>
+    <text x="140" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#eff6ff">🔍 DEBUG · Code</text>
+
+    <rect x="15" y="54" width="250" height="60" rx="8" fill="#ffffff" stroke="#3b82f6"/>
+    <text x="25" y="72" font-size="10" font-weight="bold" fill="#1e3a8a">PROMPT</text>
+    <text x="25" y="92" font-size="11" fill="#1e293b">"bug nel checkout —</text>
+    <text x="25" y="106" font-size="11" fill="#1e293b">500 on POST /pay"</text>
+
+    <rect x="60" y="148" width="160" height="40" rx="20" fill="#1d4ed8"/>
+    <text x="140" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Rule §3 — Debug</text>
+
+    <rect x="15" y="218" width="250" height="92" rx="8" fill="#ffffff" stroke="#3b82f6"/>
+    <text x="25" y="236" font-size="10" font-weight="bold" fill="#1e3a8a">LOADED</text>
+    <text x="25" y="254" font-size="10.5" fill="#1e293b">🧠 Serena · symbol map</text>
+    <text x="25" y="270" font-size="10.5" fill="#1e293b">📚 Context7 · Stripe docs</text>
+    <text x="25" y="286" font-size="10.5" fill="#1e293b">🔎 Grep · error string</text>
+    <text x="25" y="302" font-size="10.5" fill="#1e293b">📜 Sentry MCP · stack trace</text>
+
+    <rect x="15" y="340" width="250" height="110" rx="8" fill="#1e3a8a"/>
+    <text x="25" y="358" font-size="10" font-weight="bold" fill="#bfdbfe">SKILL + AGENT</text>
+    <text x="25" y="378" font-size="11" fill="#ffffff">/debug</text>
+    <text x="25" y="395" font-size="11" fill="#ffffff">+ shine-debugger (Task)</text>
+    <text x="25" y="415" font-size="10" fill="#93c5fd">• parallel symbol search</text>
+    <text x="25" y="430" font-size="10" fill="#93c5fd">• root-cause narrowing</text>
+    <text x="25" y="445" font-size="10" fill="#93c5fd">• no fix until approved</text>
+
+    <rect x="15" y="482" width="250" height="96" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="500" font-size="10" font-weight="bold" fill="#1e3a8a">REPORT (5 sections)</text>
+    <text x="25" y="518" font-size="10" fill="#1e293b">1. Summary</text>
+    <text x="25" y="532" font-size="10" fill="#1e293b">2. Details · files + lines</text>
+    <text x="25" y="546" font-size="10" fill="#1e293b">3. Sources fetched</text>
+    <text x="25" y="560" font-size="10" fill="#1e293b">4. Open questions</text>
+    <text x="25" y="574" font-size="10" fill="#1e293b">5. Proposed next step</text>
+
+    <rect x="15" y="610" width="250" height="60" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-dasharray="4,3"/>
+    <text x="140" y="632" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">YOU APPROVE</text>
+    <text x="140" y="650" text-anchor="middle" font-size="10" fill="#1e3a8a">→ shine-executor applies fix</text>
+    <text x="140" y="664" text-anchor="middle" font-size="10" fill="#1e3a8a">tests run · diff shown</text>
+
+    <line x1="140" y1="114" x2="140" y2="145" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="188" x2="140" y2="215" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="310" x2="140" y2="337" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="450" x2="140" y2="479" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="578" x2="140" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ================= COLUMN 4: LEAD ENRICHMENT ================= -->
+  <g transform="translate(1080,160)">
+    <rect x="0" y="0" width="280" height="760" rx="14" fill="url(#g-col4)" stroke="#ec4899" stroke-width="2" filter="url(#soft)"/>
+    <rect x="0" y="0" width="280" height="38" rx="14" fill="#be185d"/>
+    <text x="140" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#fdf2f8">🧲 LEAD ENRICH · Outbound</text>
+
+    <rect x="15" y="54" width="250" height="60" rx="8" fill="#ffffff" stroke="#ec4899"/>
+    <text x="25" y="72" font-size="10" font-weight="bold" fill="#9d174d">PROMPT</text>
+    <text x="25" y="92" font-size="11" fill="#1e293b">"enrich 50-company list</text>
+    <text x="25" y="106" font-size="11" fill="#1e293b">→ CMOs + verified email"</text>
+
+    <rect x="60" y="148" width="160" height="40" rx="20" fill="#be185d"/>
+    <text x="140" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Rule §20 — Enrichment</text>
+
+    <rect x="15" y="218" width="250" height="92" rx="8" fill="#ffffff" stroke="#ec4899"/>
+    <text x="25" y="236" font-size="10" font-weight="bold" fill="#9d174d">LOADED</text>
+    <text x="25" y="254" font-size="10.5" fill="#1e293b">🐍 your-contact-extractor</text>
+    <text x="25" y="270" font-size="10.5" fill="#1e293b">🎯 Apollo MCP · people</text>
+    <text x="25" y="286" font-size="10.5" fill="#1e293b">🔎 Hunter · email verify</text>
+    <text x="25" y="302" font-size="10.5" fill="#1e293b">🕷 Firecrawl · company site</text>
+
+    <rect x="15" y="340" width="250" height="110" rx="8" fill="#831843"/>
+    <text x="25" y="358" font-size="10" font-weight="bold" fill="#fbcfe8">SKILL + AGENT</text>
+    <text x="25" y="378" font-size="11" fill="#ffffff">/lead-enrich</text>
+    <text x="25" y="395" font-size="11" fill="#ffffff">+ shine-enrichment-agent</text>
+    <text x="25" y="415" font-size="10" fill="#f9a8d4">• only verified data</text>
+    <text x="25" y="430" font-size="10" fill="#f9a8d4">• label "inferred — unverified"</text>
+    <text x="25" y="445" font-size="10" fill="#f9a8d4">• GDPR filter applied</text>
+
+    <rect x="15" y="482" width="250" height="96" rx="8" fill="#ffffff" stroke="#ec4899" stroke-width="2"/>
+    <text x="25" y="500" font-size="10" font-weight="bold" fill="#9d174d">OUTPUT</text>
+    <text x="25" y="520" font-size="11" fill="#1e293b">./out/leads-2026-04.csv</text>
+    <text x="25" y="540" font-size="10" fill="#475569">company, name, role, email,</text>
+    <text x="25" y="555" font-size="10" fill="#475569">verified?, source_url,</text>
+    <text x="25" y="570" font-size="10" fill="#475569">inferred_pattern (Y/N)</text>
+
+    <rect x="15" y="610" width="250" height="60" rx="8" fill="#fdf2f8" stroke="#be185d" stroke-dasharray="4,3"/>
+    <text x="140" y="632" text-anchor="middle" font-size="11" font-weight="bold" fill="#831843">YOU APPROVE</text>
+    <text x="140" y="650" text-anchor="middle" font-size="10" fill="#831843">→ Saleshandy dry-run first</text>
+    <text x="140" y="664" text-anchor="middle" font-size="10" fill="#831843">never auto-launch campaign</text>
+
+    <line x1="140" y1="114" x2="140" y2="145" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="188" x2="140" y2="215" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="310" x2="140" y2="337" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="450" x2="140" y2="479" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="140" y1="578" x2="140" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Footer: quickstart commands -->
+  <rect x="20" y="936" width="1360" height="34" rx="8" fill="#0f172a"/>
+  <text x="40" y="958" font-size="11" fill="#fbbf24" font-weight="bold">QUICKSTART →</text>
+  <text x="150" y="958" font-size="11" fill="#e2e8f0" font-family="monospace">./install.sh  ·  claude  ·  /shine-help  ·  /proposal  ·  /draft-email  ·  /debug  ·  /lead-enrich</text>
+</svg>

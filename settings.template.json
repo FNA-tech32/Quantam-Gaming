@@ -1,0 +1,201 @@
+{
+  "_comment_env": "Environment variables injected into every Claude Code session. Leave a value blank or remove the key entirely to use defaults. See docs/CUSTOMIZATION.md.",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+
+    "_comment_gateway": "Leave ANTHROPIC_BASE_URL empty to hit the official api.anthropic.com. Fill only if you route through a custom gateway.",
+    "ANTHROPIC_BASE_URL": "",
+
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5",
+
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1",
+    "CLAUDE_CODE_USE_BEDROCK": "0",
+    "DISABLE_PROMPT_CACHING": "0",
+
+    "_comment_telemetry": "Telemetry is OFF by default. To opt in, flip CLAUDE_CODE_ENABLE_TELEMETRY to '1' and fill the OTEL_* values. See docs/CUSTOMIZATION.md#telemetry.",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
+    "OTEL_METRICS_EXPORTER": "otlp",
+    "OTEL_LOGS_EXPORTER": "otlp",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/json",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "",
+    "OTEL_RESOURCE_ATTRIBUTES": "",
+    "OTEL_METRIC_EXPORT_INTERVAL": "10000",
+    "OTEL_LOGS_EXPORT_INTERVAL": "10000"
+  },
+
+  "model": "claude-opus-4-6",
+
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/global-memory-symlink.sh\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-check-update.js\"",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/integration-sync.js\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-context-monitor.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-prompt-guard.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-read-guard.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-precompact.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/hooks/shine-learning-log.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+
+  "statusLine": {
+    "type": "command",
+    "command": "node ~/.claude/statusline.js"
+  },
+
+  "_comment_plugins": "SHINE ships with NO plugins enabled by default — each plugin loads MCP tools/skills into every session, eating context tokens. Pick a curated bundle by running: shine activate <profile>. Profiles live in ~/.claude/shine/profiles/ (minimal, writing, outbound, seo, dev, full). To enable a plugin manually, set its key to true below.",
+  "enabledPlugins": {},
+
+  "_comment_disabled_mcps": "Force-disable specific MCP servers by name (useful for claude.ai web connectors that auto-load heavy tool schemas, e.g. Ahrefs, Figma, Postman, Supabase, Kubernetes). Also populated automatically by 'shine activate <profile>'.",
+  "disabledMcpjsonServers": [],
+
+  "extraKnownMarketplaces": {
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    },
+    "Arize-ai-arize-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Arize-ai/arize-skills"
+      }
+    },
+    "claude-code-lsps": {
+      "source": {
+        "source": "github",
+        "repo": "Piebald-AI/claude-code-lsps"
+      }
+    }
+  },
+
+  "_comment_mcp": "MCP servers — user-configured. Uncomment the ones you need. See docs/ADDING-INTEGRATIONS.md for the full guide. All follow Rule #21 (Tiered Fallback): free/local first.",
+  "mcpServers": {
+    "_comment": "Uncomment the servers you want. All Tier 1 (free) unless noted.",
+
+    "_comment_search": "--- SEARCH & WEB INTELLIGENCE ---",
+
+    "_comment_databases": "--- DATABASES & LOCAL ANALYTICS ---",
+
+    "_comment_vector": "--- VECTOR MEMORY & SEMANTIC SEARCH ---",
+
+    "_comment_sandbox": "--- SANDBOX & CODE EXECUTION ---",
+
+    "_comment_viz": "--- DATA VISUALIZATION ---",
+
+    "_comment_security": "--- SECURITY & SCANNING ---",
+
+    "_comment_monitoring": "--- MONITORING & OBSERVABILITY ---",
+
+    "_comment_vcs": "--- VERSION CONTROL ---",
+
+    "_comment_files": "--- FILE SYSTEMS ---",
+
+    "_comment_research": "--- RESEARCH & ACADEMIC ---",
+
+    "_comment_knowledge": "--- KNOWLEDGE MANAGEMENT ---",
+
+    "_comment_comms": "--- COMMUNICATION ---",
+
+    "_comment_social": "--- SOCIAL MEDIA ---",
+
+    "_comment_cloud": "--- CLOUD & INFRASTRUCTURE ---",
+
+    "_comment_ai": "--- AI SERVICES ---",
+
+    "_comment_system": "--- SYSTEM AUTOMATION ---",
+
+    "_comment_geo": "--- LOCATION & GEO ---",
+
+    "_comment_finance": "--- FINANCE ---",
+
+    "_comment_devtools": "--- DEV TOOLS (EXTENDED) ---"
+  },
+
+  "_comment_thinking": "Extended thinking on every turn costs tokens. Off by default — flip to true for planning-heavy sessions, or set per-request via /ultrathink.",
+  "alwaysThinkingEnabled": false
+}

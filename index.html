@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Quantam Gaming | Next-Gen Esports, Tournaments & Gaming Ecosystem</title>
+  <meta name="description" content="Quantam Gaming is a next-generation esports and gaming powerhouse featuring premier competitive tournaments, immersive game studio development, and pro gamer ecosystems.">
+  <meta name="keywords" content="Quantam Gaming, Esports, Competitive Gaming, Tournaments, Game Development, Gaming Community, PC Rig Engineering">
+  <meta name="author" content="Quantam Gaming Studios">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quantamgaming.com/">
+  <meta property="og:title" content="Quantam Gaming | Level Up Your Reality">
+  <meta property="og:description" content="Discover premier esports championships, cutting-edge game releases, and elite competitive gaming services.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quantam Gaming | Next-Gen Esports">
+  <meta name="twitter:description" content="Premier competitive tournaments, immersive game releases, and pro esports ecosystem.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5' fill='%23070913' stroke='%2300f0ff' stroke-width='6'/><path d='M35 35 L65 35 L65 50 L35 50 L35 65 L65 65' stroke='%23a855f7' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='50' cy='50' r='8' fill='%2300f0ff'/></svg>">
+
+  <!-- Fonts: Orbitron for Sci-Fi / Cyber Headings & Plus Jakarta Sans for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Quantum Glow Background -->
+  <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
+  <div class="ambient-glow glow-violet" aria-hidden="true"></div>
+  <div class="ambient-glow glow-magenta" aria-hidden="true"></div>
+  <canvas id="quantum-canvas" class="quantum-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper" id="main-header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" id="nav-brand-logo">
+        <span class="logo-gem">
+          <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
+            <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" stroke="url(#logo-grad)" stroke-width="2.5" fill="#0d1124" />
+            <path d="M12 20L20 12L28 20L20 28Z" fill="url(#core-grad)" />
+            <circle cx="20" cy="20" r="3" fill="#ffffff" />
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#00f0ff" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+              <linearGradient id="core-grad" x1="12" y1="12" x2="28" y2="28">
+                <stop offset="0%" stop-color="#00f0ff" />
+                <stop offset="100%" stop-color="#ec4899" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <div class="brand-name-group">
+          <span class="brand-title">QUANTAM</span>
+          <span class="brand-subtitle">GAMING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="desktop-nav-links">
+        <li><a href="#hero" class="nav-item active">Home</a></li>
+        <li><a href="#games" class="nav-item">Arenas</a></li>
+        <li><a href="#tournaments" class="nav-item">Tournaments</a></li>
+        <li><a href="#services" class="nav-item">Ecosystem</a></li>
+        <li><a href="#community" class="nav-item">Community</a></li>
+        <li><a href="#contact" class="nav-item">Contact Hub</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline" id="nav-support-btn">
+          <span class="pulse-indicator"></span> 24/7 Desk
+        </a>
+        <a href="#tournaments" class="btn btn-primary" id="nav-register-btn">
+          <span>Join Arena</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#games" class="mobile-nav-link">Arenas & Games</a></li>
+        <li><a href="#tournaments" class="mobile-nav-link">Live Tournaments</a></li>
+        <li><a href="#services" class="mobile-nav-link">Gaming Ecosystem</a></li>
+        <li><a href="#community" class="mobile-nav-link">Esports Community</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact & Support Hub</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <div class="contact-pill-mini">
+          <span>Official: hello@quantamgaming.com</span>
+        </div>
+        <div class="contact-pill-mini">
+          <span>Escalation: support@quantamgaming.com</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-glow" id="hero-badge">
+            <span class="badge-dot"></span>
+            <span>NEXT-GEN ESPORTS & GAMING STUDIOS</span>
+            <span class="badge-tag">v2026.4</span>
+          </div>
+
+          <h1 class="hero-heading">
+            LEVEL UP YOUR REALITY WITH <span class="text-gradient">QUANTAM GAMING</span>
+          </h1>
+
+          <p class="hero-lead">
+            Welcome to the frontier of competitive gaming. Quantam Gaming architects elite championship tournaments, state-of-the-art interactive gaming realms, and high-performance esports infrastructure for players, creators, and teams worldwide.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#tournaments" class="btn btn-primary btn-lg" id="hero-cta-tournaments">
+              <span>Enter Championships</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-glass btn-lg" id="hero-cta-contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>Contact & Partner</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Grid -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-number" data-target="240">0</div>
+              <span class="metric-unit">K+</span>
+              <div class="metric-label">Active Pro Gamers</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="1500">0</div>
+              <span class="metric-unit">+</span>
+              <div class="metric-label">Tournaments Hosted</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="4">0</div>
+              <span class="metric-unit">.9M</span>
+              <div class="metric-label">Prize Pools Disbursed</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="99">0</div>
+              <span class="metric-unit">.98%</span>
+              <div class="metric-label">Server Uptime Reliability</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Holo-Card -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="holo-stage">
+            <div class="holo-frame">
+              <div class="holo-header">
+                <div class="holo-tag"><span class="live-dot"></span> LIVE BATTLE ARENA</div>
+                <div class="holo-code">QNTM-CORE-v8</div>
+              </div>
+
+              <div class="match-live-banner">
+                <div class="team team-alpha">
+                  <span class="team-badge">QT</span>
+                  <div class="team-info">
+                    <span class="team-name">Quantam Titans</span>
+                    <span class="team-stat">Rank #1 Global</span>
+                  </div>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="team team-omega">
+                  <span class="team-badge alt">VX</span>
+                  <div class="team-info">
+                    <span class="team-name">Vortex Cyber</span>
+                    <span class="team-stat">Division Elite</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="holo-stats-row">
+                <div class="holo-stat-item">
+                  <span class="stat-hdr">PRIZE POOL</span>
+                  <span class="stat-val text-cyan">$250,000 USD</span>
+                </div>
+                <div class="holo-stat-item">
+                  <span class="stat-hdr">SPECTATORS</span>
+                  <span class="stat-val text-violet">142,800 LIVE</span>
+                </div>
+                <div class="holo-stat-item">
+                  <span class="stat-hdr">LATENCY</span>
+                  <span class="stat-val text-emerald">1.2ms SYNC</span>
+                </div>
+              </div>
+
+              <!-- Real-time HUD chart simulation -->
+              <div class="holo-bars">
+                <div class="bar-col"><div class="bar-fill" style="height: 65%;"></div><span>MAP 1</span></div>
+                <div class="bar-col"><div class="bar-fill" style="height: 85%;"></div><span>MAP 2</span></div>
+                <div class="bar-col"><div class="bar-fill active" style="height: 94%;"></div><span>DECIDER</span></div>
+                <div class="bar-col"><div class="bar-fill" style="height: 45%;"></div><span>K/D 2.4</span></div>
+                <div class="bar-col"><div class="bar-fill" style="height: 78%;"></div><span>APM 320</span></div>
+              </div>
+
+              <div class="holo-footer">
+                <span class="status-msg">● QUANTAM SERVER MATRIX OPTIMAL</span>
+                <span class="ping-badge">TICK: 128Hz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor & Platform Marquee -->
+    <section class="partners-section" aria-label="Partner Platforms">
+      <div class="container marquee-header">
+        <p class="marquee-subtitle">POWERED BY NEXT-GEN TECHNOLOGY & ESPORTS ALLIANCES</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div class="partner-item">QUANTAM ARENA CLOUD</div>
+          <div class="partner-item">RAY-TRACED GRAPHICS ENGINE</div>
+          <div class="partner-item">FIBER 128-TICK SERVERS</div>
+          <div class="partner-item">DISCORD VERIFIED GUILD</div>
+          <div class="partner-item">TWITCH OFFICIAL BROADCAST</div>
+          <div class="partner-item">CHRONO-RIG HARDWARE</div>
+          <div class="partner-item">ANTI-CHEAT NEURAL SHIELD</div>
+          <!-- Repeat for infinite loop -->
+          <div class="partner-item">QUANTAM ARENA CLOUD</div>
+          <div class="partner-item">RAY-TRACED GRAPHICS ENGINE</div>
+          <div class="partner-item">FIBER 128-TICK SERVERS</div>
+          <div class="partner-item">DISCORD VERIFIED GUILD</div>
+          <div class="partner-item">TWITCH OFFICIAL BROADCAST</div>
+          <div class="partner-item">CHRONO-RIG HARDWARE</div>
+          <div class="partner-item">ANTI-CHEAT NEURAL SHIELD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Arenas & Titles Showcase -->
+    <section class="section games-section" id="games">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">FLAGSHIP ARENAS</span>
+          <h2 class="section-title">CHAMPIONSHIP TITLES & GAME MODES</h2>
+          <p class="section-desc">
+            Immerse yourself in precision-engineered arenas built for competitive integrity, lightning-fast reflexes, and high-stakes tournament combat.
+          </p>
+
+          <!-- Arena Filters -->
+          <div class="filter-controls" role="tablist" aria-label="Filter Game Arenas">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Arenas</button>
+            <button class="filter-btn" data-filter="fps" role="tab" aria-selected="false">Tactical FPS</button>
+            <button class="filter-btn" data-filter="moba" role="tab" aria-selected="false">Sci-Fi MOBA</button>
+            <button class="filter-btn" data-filter="battle-royale" role="tab" aria-selected="false">Battle Royale</button>
+            <button class="filter-btn" data-filter="vr" role="tab" aria-selected="false">VR Immersion</button>
+          </div>
+        </div>
+
+        <div class="games-grid" id="games-grid">
+          <!-- Game 1 -->
+          <article class="game-card" data-category="fps">
+            <div class="game-media">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Quantum Warfare Arena" loading="lazy">
+              <span class="game-badge">MAJOR ARENA</span>
+              <div class="game-overlay">
+                <span class="overlay-stat">⚡ 128-Tick Competitive</span>
+              </div>
+            </div>
+            <div class="game-body">
+              <div class="game-meta">
+                <span class="game-genre">Tactical FPS</span>
+                <span class="game-rating">★ 4.9 (48k ratings)</span>
+              </div>
+              <h3 class="game-title">Quantum Warfare: Strike Vector</h3>
+              <p class="game-summary">
+                5v5 tactical cyber shooter featuring telekinetic abilities, microsecond hit-registration, and zero-gravity vertical firefights.
+              </p>
+              <div class="game-specs">
+                <div class="spec-col">
+                  <span class="spec-name">Prize Pool</span>
+                  <span class="spec-val">$500,000</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Active Squads</span>
+                  <span class="spec-val">12,400+</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Tick Rate</span>
+                  <span class="spec-val">128 Hz</span>
+                </div>
+              </div>
+              <a href="#tournaments" class="btn btn-outline btn-full">View Match Brackets</a>
+            </div>
+          </article>
+
+          <!-- Game 2 -->
+          <article class="game-card" data-category="moba">
+            <div class="game-media">
+              <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Nexus Rift MOBA" loading="lazy">
+              <span class="game-badge alt">STRATEGY</span>
+              <div class="game-overlay">
+                <span class="overlay-stat">🏆 Global Masters</span>
+              </div>
+            </div>
+            <div class="game-body">
+              <div class="game-meta">
+                <span class="game-genre">Sci-Fi MOBA</span>
+                <span class="game-rating">★ 4.8 (32k ratings)</span>
+              </div>
+              <h3 class="game-title">Nexus Rift: Chrono Champions</h3>
+              <p class="game-summary">
+                Coordinate dimensional heroes across a three-lane quantum nexus with temporal ultimate abilities and objective control.
+              </p>
+              <div class="game-specs">
+                <div class="spec-col">
+                  <span class="spec-name">Prize Pool</span>
+                  <span class="spec-val">$350,000</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Pro Leagues</span>
+                  <span class="spec-val">8 Regions</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Roster</span>
+                  <span class="spec-val">46 Champions</span>
+                </div>
+              </div>
+              <a href="#tournaments" class="btn btn-outline btn-full">View Match Brackets</a>
+            </div>
+          </article>
+
+          <!-- Game 3 -->
+          <article class="game-card" data-category="battle-royale">
+            <div class="game-media">
+              <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80" alt="Apex Horizon Battle Royale" loading="lazy">
+              <span class="game-badge neon">SURVIVAL</span>
+              <div class="game-overlay">
+                <span class="overlay-stat">🔥 100-Player Drop</span>
+              </div>
+            </div>
+            <div class="game-body">
+              <div class="game-meta">
+                <span class="game-genre">Battle Royale</span>
+                <span class="game-rating">★ 4.9 (65k ratings)</span>
+              </div>
+              <h3 class="game-title">Apex Horizon: Neo Sector</h3>
+              <p class="game-summary">
+                100 elite squads sky-dive into an evolving neon cyber-city where closing electromagnetic rings force brutal endgame skirmishes.
+              </p>
+              <div class="game-specs">
+                <div class="spec-col">
+                  <span class="spec-name">Prize Pool</span>
+                  <span class="spec-val">$1,000,000</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Squad Size</span>
+                  <span class="spec-val">Trios / Solos</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Map Area</span>
+                  <span class="spec-val">64 km²</span>
+                </div>
+              </div>
+              <a href="#tournaments" class="btn btn-outline btn-full">View Match Brackets</a>
+            </div>
+          </article>
+
+          <!-- Game 4 -->
+          <article class="game-card" data-category="vr">
+            <div class="game-media">
+              <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80" alt="HyperBlade VR" loading="lazy">
+              <span class="game-badge">FULL IMMERSION</span>
+              <div class="game-overlay">
+                <span class="overlay-stat">🥽 144 FPS VR</span>
+              </div>
+            </div>
+            <div class="game-body">
+              <div class="game-meta">
+                <span class="game-genre">VR Immersion</span>
+                <span class="game-rating">★ 5.0 (18k ratings)</span>
+              </div>
+              <h3 class="game-title">HyperBlade VR: Neon Duel</h3>
+              <p class="game-summary">
+                True 1:1 haptic sword and laser deflection dueling built for competitive VR esports with zero motion sickness algorithms.
+              </p>
+              <div class="game-specs">
+                <div class="spec-col">
+                  <span class="spec-name">Prize Pool</span>
+                  <span class="spec-val">$150,000</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Headsets</span>
+                  <span class="spec-val">OpenXR & PCVR</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-name">Haptic Tick</span>
+                  <span class="spec-val">1000 Hz</span>
+                </div>
+              </div>
+              <a href="#tournaments" class="btn btn-outline btn-full">View Match Brackets</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Tournaments & Bracket Hub -->
+    <section class="section tournaments-section" id="tournaments">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-tag">COMPETITIVE CIRCUIT</span>
+            <h2 class="section-title">GLOBAL CHAMPIONSHIPS & ACTIVE CUPS</h2>
+          </div>
+          <div class="header-action">
+            <a href="#contact" class="btn btn-primary" id="btn-host-tournament">Host Your Own Cup</a>
+          </div>
+        </div>
+
+        <div class="tournament-list">
+          <!-- Tournament Item 1 -->
+          <div class="tournament-row highlight-row">
+            <div class="t-badge-col">
+              <span class="status-live-pill">LIVE NOW</span>
+              <span class="t-game">QUANTAM WARFARE</span>
+            </div>
+            <div class="t-info-col">
+              <h4 class="t-title">Grand Invitational Masters 2026</h4>
+              <p class="t-meta">Quarter Finals • Best of 5 • Global Streaming on Twitch & YouTube Gaming</p>
+            </div>
+            <div class="t-prize-col">
+              <span class="label">PRIZE POOL</span>
+              <span class="val text-cyan">$250,000</span>
+            </div>
+            <div class="t-slots-col">
+              <span class="label">TEAMS</span>
+              <span class="val">32 / 32 Full</span>
+            </div>
+            <div class="t-action-col">
+              <button class="btn btn-primary btn-sm" onclick="openRegisterModal('Grand Invitational Masters 2026')">Watch Stream</button>
+            </div>
+          </div>
+
+          <!-- Tournament Item 2 -->
+          <div class="tournament-row">
+            <div class="t-badge-col">
+              <span class="status-upcoming-pill">STARTS IN 3 DAYS</span>
+              <span class="t-game">APEX HORIZON</span>
+            </div>
+            <div class="t-info-col">
+              <h4 class="t-title">Neon Cyber Series: Trio Showdown</h4>
+              <p class="t-meta">Open Qualifiers • Double Elimination • Open to Diamond+ Verified Squads</p>
+            </div>
+            <div class="t-prize-col">
+              <span class="label">PRIZE POOL</span>
+              <span class="val text-cyan">$75,000</span>
+            </div>
+            <div class="t-slots-col">
+              <span class="label">TEAMS</span>
+              <span class="val text-emerald">118 / 128 (10 Left)</span>
+            </div>
+            <div class="t-action-col">
+              <button class="btn btn-outline btn-sm" onclick="openRegisterModal('Neon Cyber Series: Trio Showdown')">Register Squad</button>
+            </div>
+          </div>
+
+          <!-- Tournament Item 3 -->
+          <div class="tournament-row">
+            <div class="t-badge-col">
+              <span class="status-upcoming-pill">NEXT WEEK</span>
+              <span class="t-game">NEXUS RIFT</span>
+            </div>
+            <div class="t-info-col">
+              <h4 class="t-title">Chrono League Championship Season 4</h4>
+              <p class="t-meta">Regional Premier Cup • NA & EU Brackets • Pro Tier Accreditation</p>
+            </div>
+            <div class="t-prize-col">
+              <span class="label">PRIZE POOL</span>
+              <span class="val text-cyan">$120,000</span>
+            </div>
+            <div class="t-slots-col">
+              <span class="label">TEAMS</span>
+              <span class="val">64 Open Slots</span>
+            </div>
+            <div class="t-action-col">
+              <button class="btn btn-outline btn-sm" onclick="openRegisterModal('Chrono League Championship Season 4')">Register Squad</button>
+            </div>
+          </div>
+
+          <!-- Tournament Item 4 -->
+          <div class="tournament-row">
+            <div class="t-badge-col">
+              <span class="status-upcoming-pill">REGISTRATION OPEN</span>
+              <span class="t-game">HYPERBLADE VR</span>
+            </div>
+            <div class="t-info-col">
+              <h4 class="t-title">Virtual Blade Master Invitational</h4>
+              <p class="t-meta">Solo Duelist Ladder • Worldwide Ping Compensated • VR Esports League</p>
+            </div>
+            <div class="t-prize-col">
+              <span class="label">PRIZE POOL</span>
+              <span class="val text-cyan">$30,000</span>
+            </div>
+            <div class="t-slots-col">
+              <span class="label">TEAMS</span>
+              <span class="val">256 Duelists</span>
+            </div>
+            <div class="t-action-col">
+              <button class="btn btn-outline btn-sm" onclick="openRegisterModal('Virtual Blade Master Invitational')">Register Solo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Gaming Ecosystem -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">FULL-SPECTRUM GAMING</span>
+          <h2 class="section-title">THE QUANTAM GAMING ECOSYSTEM</h2>
+          <p class="section-desc">
+            Beyond tournament play, Quantam Gaming delivers end-to-end solutions for publishers, esports orgs, creators, and hardware enthusiasts.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            </div>
+            <h3 class="service-title">Esports Tournament Production</h3>
+            <p class="service-text">
+              High-definition multi-camera broadcasting, custom 3D telemetry overlays, licensed casters, and automated ladder bracket management.
+            </p>
+            <ul class="service-list">
+              <li>4K 60FPS Low-latency Streaming</li>
+              <li>Official Referees & Anti-Cheat</li>
+              <li>Sponsor Integration & Brand Activations</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-title">Game Development & Co-Creation</h3>
+            <p class="service-text">
+              Full-cycle Unreal Engine 5 and Unity development, netcode engineering, level architecture, and custom shader pipelines.
+            </p>
+            <ul class="service-list">
+              <li>Sub-millisecond Server Netcode</li>
+              <li>Stylized Cyberpunk & Sci-Fi Art</li>
+              <li>Multi-platform Console & PC Publishing</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="service-title">Custom Gaming Rig Engineering</h3>
+            <p class="service-text">
+              Bespoke hardline liquid-cooled gaming rigs and tournament stadium workstations stress-tested for 0.1% low framerate stability.
+            </p>
+            <ul class="service-list">
+              <li>Direct Die Cooling & Thermal Tuning</li>
+              <li>Custom CNC Chassis & Laser Engraving</li>
+              <li>3-Year Zero-Downtime Guarantee</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="service-title">Talent Academy & Coaching</h3>
+            <p class="service-text">
+              Data-driven analytics coaching for aspiring professional players. VOD review, aim telemetry, mental performance, and team synergy.
+            </p>
+            <ul class="service-list">
+              <li>Pro Player 1-on-1 Mentorship</li>
+              <li>Biometric Reaction Time Tracking</li>
+              <li>Direct Scouting Pathway to Pro Orgs</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="service-title">Cloud Game Streaming Matrix</h3>
+            <p class="service-text">
+              Ultra low latency edge computing nodes allowing instant play on any screen with RTX 4090 performance and instant matchmaking.
+            </p>
+            <ul class="service-list">
+              <li>144 FPS @ 4K HDR Stream</li>
+              <li>Distributed Global Edge Nodes</li>
+              <li>Zero Installation Instant Play</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="service-title">AI Sentinel Anti-Cheat Protection</h3>
+            <p class="service-text">
+              Next-generation behavioral machine learning detection that catches kernel-level tampering, aim bots, and memory injections in real-time.
+            </p>
+            <ul class="service-list">
+              <li>Zero False Positive Guarantee</li>
+              <li>Continuous Neural Model Retraining</li>
+              <li>Transparent Community Ban Audits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community & Testimonials -->
+    <section class="section community-section" id="community">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">VOICES OF THE ARENA</span>
+          <h2 class="section-title">TRUSTED BY WORLD CHAMPIONS & CREATORS</h2>
+          <p class="section-desc">
+            Hear from professional esports athletes, studio partners, and tournament directors who power their gaming operations with Quantam Gaming.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Quantam Gaming's 128-tick tournament infrastructure is by far the smoothest competitive environment we've ever played on. Zero packet loss and instant hit registration during high-stakes finals."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar">AX</div>
+              <div class="author-info">
+                <span class="author-name">Alex 'ApexKyd' Vance</span>
+                <span class="author-role">Captain, Cyber Strike Champions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Partnering with Quantam Gaming Studios to launch our custom battle arena tripled our organic player retention. Their netcode engineers solved multiplayer latency problems in days that took other teams months."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar alt">MR</div>
+              <div class="author-info">
+                <span class="author-name">Maya Rodriguez</span>
+                <span class="author-role">Executive Producer, Dimensional Interactive</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Their 24/7 technical support desk and direct escalation lines are legendary. Whenever we run a 1,000-team collegiate cup, Quantam's engineers are live on our Discord with zero delay."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar neon">TC</div>
+              <div class="author-info">
+                <span class="author-name">Tyler Chen</span>
+                <span class="author-role">Esports Director, National Collegiate League</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Contact Hub with Primary & Alternative Matrix -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">GLOBAL COMMUNICATIONS</span>
+          <h2 class="section-title">QUANTAM GAMING CONTACT & SUPPORT HUB</h2>
+          <p class="section-desc">
+            Reach out for tournament registration, business sponsorships, rig builds, or 24/7 technical support. Choose between our Primary Corporate Channels and dedicated Alternative / Escalation Desks.
+          </p>
+        </div>
+
+        <!-- Primary vs Alternative Contact Matrix Table Card -->
+        <div class="contact-matrix-card">
+          <div class="matrix-card-header">
+            <div class="matrix-title-group">
+              <span class="matrix-badge">OFFICIAL DIRECTORY</span>
+              <h3 class="matrix-heading">Official Communication Channels & Escalation Matrix</h3>
+            </div>
+            <div class="matrix-status-pill">
+              <span class="live-dot"></span> ALL SYSTEMS OPERATIONAL
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="contact-matrix-table" aria-label="Quantam Gaming Contact Channels Matrix">
+              <thead>
+                <tr>
+                  <th scope="col">Department / Purpose</th>
+                  <th scope="col">Channel Tier</th>
+                  <th scope="col">Primary Official Contact</th>
+                  <th scope="col">Alternative / Escalation Detail</th>
+                  <th scope="col">Response SLA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>General & Corporate Inquiries</strong>
+                    <div class="sub-purpose">Partnerships, Media, HQ Office</div>
+                  </td>
+                  <td><span class="tier-pill primary-tier">Primary & Alternative</span></td>
+                  <td>
+                    <a href="mailto:hello@quantamgaming.com" class="link-glow">hello@quantamgaming.com</a>
+                  </td>
+                  <td>
+                    <a href="mailto:contact@quantamgaming.com" class="link-glow alt">contact@quantamgaming.com</a>
+                  </td>
+                  <td>&lt; 12 Hours</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>24/7 Player & Tournament Desk</strong>
+                    <div class="sub-purpose">Live Cup Disputes, Server Lag, Bug Reports</div>
+                  </td>
+                  <td><span class="tier-pill urgent-tier">24/7 Live Desk</span></td>
+                  <td>
+                    <a href="mailto:support@quantamgaming.com" class="link-glow">support@quantamgaming.com</a>
+                  </td>
+                  <td>
+                    <a href="mailto:tournaments@quantamgaming.com" class="link-glow alt">tournaments@quantamgaming.com</a>
+                  </td>
+                  <td>&lt; 15 Minutes (Live)</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>Phone & Direct Voice Hotlines</strong>
+                    <div class="sub-purpose">Corporate Switchboard & Emergency Hotline</div>
+                  </td>
+                  <td><span class="tier-pill primary-tier">Direct Voice</span></td>
+                  <td>
+                    <a href="tel:+18004829011" class="link-glow">+1 (800) 482-9011</a>
+                    <div class="sub-detail">Mon - Fri: 8am - 8pm PST</div>
+                  </td>
+                  <td>
+                    <a href="tel:+15557294109" class="link-glow alt">+1 (555) 729-4109</a>
+                    <div class="sub-detail">24/7 Tournament Emergency & WhatsApp</div>
+                  </td>
+                  <td>Instant during hours</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>Physical Studio Headquarters</strong>
+                    <div class="sub-purpose">Arena Studios, Hardware Labs, Visits</div>
+                  </td>
+                  <td><span class="tier-pill primary-tier">Dual Studios</span></td>
+                  <td>
+                    <strong>North America HQ:</strong><br>
+                    Quantam Gaming Studios, 8400 Cyber Way, Suite 500, Los Angeles, CA 90028, USA
+                  </td>
+                  <td>
+                    <strong>Alternative European Hub:</strong><br>
+                    Quantam Esports Lab, 42 Innovation Wharf, Silicon Docks, London EC2A 4NE, UK
+                  </td>
+                  <td>By Appointment</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>Community & Instant Chat</strong>
+                    <div class="sub-purpose">Live matchmaking, Scrims, Casters</div>
+                  </td>
+                  <td><span class="tier-pill community-tier">Community</span></td>
+                  <td>
+                    <a href="https://discord.gg/quantamgaming" target="_blank" rel="noopener noreferrer" class="link-glow">discord.gg/quantamgaming</a>
+                  </td>
+                  <td>
+                    <a href="https://t.me/quantamgaming_official" target="_blank" rel="noopener noreferrer" class="link-glow alt">t.me/quantamgaming_official</a>
+                  </td>
+                  <td>Live Real-Time</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contact Cards & Interactive Form Row -->
+        <div class="contact-interactive-grid">
+          <!-- Left: Information Cards & Alternative Channels Picker -->
+          <div class="contact-details-col">
+            <h3 class="col-title">Direct Connection Points</h3>
+            <p class="col-subtitle">
+              Choose your direct pathway. Our specialized coordinators monitor primary queues and standby backup channels around the clock.
+            </p>
+
+            <div class="direct-cards-stack">
+              <!-- Card 1: Primary Email -->
+              <div class="direct-card">
+                <div class="d-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="d-content">
+                  <div class="d-tag">PRIMARY &amp; ALTERNATIVE EMAIL</div>
+                  <div class="d-value-group">
+                    <div class="d-main">
+                      <span class="d-pill primary">Primary:</span>
+                      <a href="mailto:hello@quantamgaming.com">hello@quantamgaming.com</a>
+                    </div>
+                    <div class="d-alt">
+                      <span class="d-pill alt">Alternative:</span>
+                      <a href="mailto:support@quantamgaming.com">support@quantamgaming.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Phone Hotline -->
+              <div class="direct-card">
+                <div class="d-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div class="d-content">
+                  <div class="d-tag">VOICE &amp; TOURNAMENT HELPLINE</div>
+                  <div class="d-value-group">
+                    <div class="d-main">
+                      <span class="d-pill primary">Toll-Free:</span>
+                      <a href="tel:+18004829011">+1 (800) 482-9011</a>
+                    </div>
+                    <div class="d-alt">
+                      <span class="d-pill alt">Alternative Line:</span>
+                      <a href="tel:+15557294109">+1 (555) 729-4109</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Physical Studio -->
+              <div class="direct-card">
+                <div class="d-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="d-content">
+                  <div class="d-tag">STUDIO HEADQUARTERS &amp; LABS</div>
+                  <div class="d-value-group">
+                    <div class="d-main">
+                      <span class="d-pill primary">HQ:</span>
+                      <span>8400 Cyber Way, Suite 500, Los Angeles, CA 90028</span>
+                    </div>
+                    <div class="d-alt">
+                      <span class="d-pill alt">Europe Lab:</span>
+                      <span>42 Innovation Wharf, Silicon Docks, London EC2A 4NE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Ecosystem Quick Bar -->
+            <div class="social-quick-bar">
+              <span class="sq-title">JOIN OFFICIAL BROADCASTS:</span>
+              <div class="social-links-row">
+                <a href="https://discord.gg/quantamgaming" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Quantam Gaming Discord">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                  <span>Discord</span>
+                </a>
+                <a href="https://twitch.tv/quantamgaming" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Quantam Gaming Twitch">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span>Twitch</span>
+                </a>
+                <a href="https://youtube.com/@quantamgaming" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Quantam Gaming YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>YouTube</span>
+                </a>
+                <a href="https://twitter.com/quantamgaming" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Quantam Gaming X">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <span>X / Twitter</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Transmission Form -->
+          <div class="contact-form-col">
+            <div class="form-card">
+              <div class="form-card-header">
+                <span class="f-badge">DIRECT TRANSMISSION</span>
+                <h3 class="f-title">Send a Transmission to Quantam HQ</h3>
+                <p class="f-desc">Fill out your inquiry details below. Our automated dispatch system will route your ticket to the exact division manager.</p>
+              </div>
+
+              <form id="contact-form" class="gaming-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-name" class="form-label">Gamer Tag or Full Name <span class="required">*</span></label>
+                    <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Phoenix_Rift or Marcus Vance" required>
+                    <span class="field-error" id="name-error">Please enter your gamer tag or name</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="form-email" name="email" class="form-input" placeholder="name@domain.com" required>
+                    <span class="field-error" id="email-error">Please enter a valid email address</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-category" class="form-label">Inquiry Division</label>
+                    <select id="form-category" name="category" class="form-select">
+                      <option value="tournament">Tournament Entry / Cup Operations</option>
+                      <option value="sponsorship">Sponsorship & Brand Partnership</option>
+                      <option value="studio">Game Studio & Netcode Collaboration</option>
+                      <option value="hardware">Custom Liquid Rig Engineering</option>
+                      <option value="support">24/7 Technical Player Support</option>
+                      <option value="talent">Esports Academy / Pro Scouting</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-routing" class="form-label">Preferred Response Route</label>
+                    <select id="form-routing" name="routing" class="form-select">
+                      <option value="primary">Primary Email Desk (hello@quantamgaming.com)</option>
+                      <option value="escalation">Alternative / Priority Support (support@quantamgaming.com)</option>
+                      <option value="phone">Direct Voice Call Back</option>
+                      <option value="discord">Discord Community DM</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Transmission Brief & Details <span class="required">*</span></label>
+                  <textarea id="form-message" name="message" rows="5" class="form-textarea" placeholder="Describe your team, tournament goals, rig specifications, or technical question..." required></textarea>
+                  <span class="field-error" id="message-error">Please enter details about your inquiry</span>
+                </div>
+
+                <div class="form-footer-action">
+                  <button type="submit" class="btn btn-primary btn-lg btn-full" id="btn-submit-form">
+                    <span class="btn-text">Transmit Message</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  </button>
+                </div>
+
+                <div class="form-status" id="form-status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <span class="section-tag">INTEL & ASSISTANCE</span>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-desc">Everything you need to know about Quantam Gaming tournaments, server specs, and communication channels.</p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What contact channel should I use for immediate tournament disputes?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For urgent live tournament rulings, match lag, or dispute appeals, use our Alternative / 24/7 live desk directly at <strong>support@quantamgaming.com</strong> or call our live tournament helpline at <strong>+1 (555) 729-4109</strong>. Referees and tournament admins monitor this queue in real-time during all live cups.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are Quantam Gaming tournaments open to amateur squads?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We run tiered competitions ranging from Grassroots Community Cups with open entry, up to Premier Master Invitationals with global ranking points. Check the Tournaments tab or join our Discord to see upcoming open qualifier dates.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What are the specifications of Quantam's dedicated game servers?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>All Quantam Gaming official championship arenas run on custom high-frequency dedicated bare-metal servers locked at 128Hz or 144Hz sub-tick rates, with automated sub-millisecond lag compensation, AI anti-cheat validation, and multi-cloud DDoS scrubbing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can brands and sponsors collaborate with Quantam Gaming?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Commercial partners can contact our primary corporate desk at <strong>hello@quantamgaming.com</strong> or our alternative direct channel at <strong>contact@quantamgaming.com</strong>. We offer custom 3D arena integrations, live broadcast branding, sponsored cup title naming, and influencer activations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer" id="main-footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-gem">
+              <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+                <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" stroke="#00f0ff" stroke-width="2.5" fill="#0d1124" />
+                <circle cx="20" cy="20" r="4" fill="#a855f7" />
+              </svg>
+            </span>
+            <div class="brand-name-group">
+              <span class="brand-title">QUANTAM</span>
+              <span class="brand-subtitle">GAMING</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Quantam Gaming is a next-generation competitive esports ecosystem, tournament organizer, and interactive game studio redefining competitive digital entertainment.
+          </p>
+          <div class="footer-verification">
+            <span class="cert-badge">🛡️ Neural Anti-Cheat Verified</span>
+            <span class="cert-badge">⚡ 128Hz Tick Certified</span>
+          </div>
+        </div>
+
+        <!-- Links Col 1 -->
+        <div class="footer-links-col">
+          <h4 class="f-col-title">Game Arenas</h4>
+          <ul class="f-links">
+            <li><a href="#games">Quantum Warfare (FPS)</a></li>
+            <li><a href="#games">Nexus Rift (MOBA)</a></li>
+            <li><a href="#games">Apex Horizon (Battle Royale)</a></li>
+            <li><a href="#games">HyperBlade (VR Duelist)</a></li>
+            <li><a href="#tournaments">Live Tournament Brackets</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Col 2 -->
+        <div class="footer-links-col">
+          <h4 class="f-col-title">Ecosystem & Services</h4>
+          <ul class="f-links">
+            <li><a href="#services">Tournament Broadcasting</a></li>
+            <li><a href="#services">Unreal Engine Netcode</a></li>
+            <li><a href="#services">Hardline Liquid Rigs</a></li>
+            <li><a href="#services">Esports Coaching Academy</a></li>
+            <li><a href="#services">Cloud Game Streaming</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Col 3: Direct Contacts -->
+        <div class="footer-links-col contact-col">
+          <h4 class="f-col-title">Verified Contact Channels</h4>
+          <ul class="f-contact-list">
+            <li>
+              <span class="f-label">Primary Email:</span>
+              <a href="mailto:hello@quantamgaming.com">hello@quantamgaming.com</a>
+            </li>
+            <li>
+              <span class="f-label">Alternative / Support:</span>
+              <a href="mailto:support@quantamgaming.com">support@quantamgaming.com</a>
+            </li>
+            <li>
+              <span class="f-label">Primary Hotline:</span>
+              <a href="tel:+18004829011">+1 (800) 482-9011</a>
+            </li>
+            <li>
+              <span class="f-label">Alternative / WhatsApp:</span>
+              <a href="tel:+15557294109">+1 (555) 729-4109</a>
+            </li>
+            <li>
+              <span class="f-label">Headquarters:</span>
+              <span>8400 Cyber Way, Suite 500, Los Angeles, CA</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2026 <strong>Quantam Gaming Studios</strong>. All rights reserved. Built for competitive excellence.
+        </p>
+        <div class="footer-legal">
+          <a href="#contact">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#contact">Terms of Arena Play</a>
+          <span class="sep">•</span>
+          <a href="#contact">Tournament Rulebook</a>
+          <span class="sep">•</span>
+          <a href="#contact">Security & Anti-Cheat Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Tournament Registration Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">OFFICIAL BRACKET ENTRY</span>
+        <h3 class="modal-title" id="modal-title">Tournament Registration</h3>
+        <p class="modal-desc" id="modal-tournament-name">Selected Cup: Grand Invitational Masters 2026</p>
+      </div>
+      <form id="modal-reg-form" class="gaming-form">
+        <div class="form-group">
+          <label for="reg-team" class="form-label">Team / Clan Name</label>
+          <input type="text" id="reg-team" class="form-input" placeholder="e.g. Cyber Ninjas" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-captain" class="form-label">Captain Gamer Tag & Email</label>
+          <input type="text" id="reg-captain" class="form-input" placeholder="e.g. Shadow_X (shadow@example.com)" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-discord" class="form-label">Discord Tag (For Match Marshalling)</label>
+          <input type="text" id="reg-discord" class="form-input" placeholder="e.g. Captain#1337" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Confirm Official Entry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "quantam-gaming",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node init && vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diShine-digital-agency/SHINE-Code-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/diShine-digital-agency/SHINE-Code-System/issues"
+  },
+  "homepage": "https://github.com/diShine-digital-agency/SHINE-Code-System#readme",
+  "dependencies": {
+    "vite": "^8.3.5"
+  }
+}

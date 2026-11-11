@@ -1,0 +1,13 @@
+{
+  "name": "writing",
+  "description": "Writing, content, proposals. Adds context7 for live library docs. ~20k context.",
+  "estimatedContextTokens": 20000,
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true
+  },
+  "disabledMcpjsonServers": [
+    "Ahrefs", "Apollo", "Postman", "Supabase", "Kubernetes_MCP_Server",
+    "AWS_API_MCP_Server", "Figma", "Hugging_Face", "Blockscout",
+    "Vibe_Prospecting", "Desktop_Commander", "Apify"
+  ]
+}

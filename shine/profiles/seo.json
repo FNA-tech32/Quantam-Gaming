@@ -1,0 +1,13 @@
+{
+  "name": "seo",
+  "description": "SEO work. Keeps Ahrefs + GSC + context7. Drops outbound/dev MCPs. ~40k context.",
+  "estimatedContextTokens": 40000,
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true
+  },
+  "disabledMcpjsonServers": [
+    "Apollo", "Postman", "Supabase", "Kubernetes_MCP_Server",
+    "AWS_API_MCP_Server", "Figma", "Hugging_Face", "Blockscout",
+    "Vibe_Prospecting", "Desktop_Commander"
+  ]
+}
